@@ -12,9 +12,8 @@ Language Coverage Matrix
 
 The Matrix document contains information about the languages that are currently covered across various Wikimedia projects. 
 
-# src/project-langdb.csv - This file contains information about the languages in which Wikipedia or any other Wikimedia project exists
-
-# src/incubator-langdb.csv - This file contains information about the languages which are present in the incubator and do not have any active Wikimedia projects.
+1. src/project-langdb.csv - This file contains information about the languages in which Wikipedia or any other Wikimedia project exists
+2. src/incubator-langdb.csv - This file contains information about the languages which are present in the incubator and do not have any active Wikimedia projects.
 
 These files are periodically reviewed and updated.
 
@@ -23,7 +22,7 @@ Language Coverage Dashboard
 
 The Language Coverage dashboard will be a visual representation of the Matrix data. It will provide features to:
 
-# search languages
-# query information about the features available
-# compare language coverage over a period of time
-# visually present information
+1. search languages
+2. query information about the features available
+3. compare language coverage over a period of time
+4. visually present information
