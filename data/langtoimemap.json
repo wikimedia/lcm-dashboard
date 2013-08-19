@@ -1,0 +1,236 @@
+{	
+	"ady": {
+		"inputmethods": [ "cyrl-palochka" ]
+	},
+	"ahr": {
+		"inputmethods": [ "mr-transliteration", "mr-inscript" ]
+	},
+	"am": {
+		"inputmethods": [ "am-transliteration" ]
+	},
+	"ar": {
+		"inputmethods": [ "ar-kbd" ]
+	},
+	"as": {
+		"inputmethods": [ "as-transliteration", "as-avro", "as-bornona", "as-inscript", "as-phonetic", "as-inscript2" ]
+	},
+	"av": {
+		"inputmethods": [ "cyrl-palochka" ]
+	},
+	"be": {
+		"inputmethods": [ "be-transliteration", "be-latin", "be-kbd" ]
+	},
+	"be-tarask": {
+		"inputmethods": [ "be-transliteration", "be-latin" ]
+	},
+	"bh": {
+		"inputmethods": [ "hi-transliteration" ]
+	},
+	"bho": {
+		"inputmethods": [ "hi-transliteration" ]
+	},
+	"bn": {
+		"inputmethods": [ "bn-avro", "bn-inscript", "bn-nkb", "bn-probhat", "bn-inscript2" ]
+	},
+	"brx": {
+		"inputmethods": [ "brx-inscript", "brx-inscript2" ]
+	},
+	"ce": {
+		"inputmethods": [ "cyrl-palochka" ]
+	},
+	"cv": {
+		"inputmethods": [ "cv-cyr-altgr", "cv-lat-altgr", "cv-cyr-numbers" ]
+	},
+	"da": {
+		"inputmethods": [ "da-normforms" ]
+	},
+	"de": {
+		"inputmethods": [ "de-transliteration" ]
+	},
+	"doi": {
+		"inputmethods": [ "doi-inscript2" ]
+	},
+	"en": {
+		"inputmethods": [ "ipa-sil" ]
+	},
+	"el": {
+		"inputmethods": [ "el-kbd" ]
+	},
+	"eo": {
+		"inputmethods": [ "eo-transliteration", "eo-h", "eo-h-f", "eo-plena", "eo-q", "eo-vi", "eo-x" ]
+	},
+	"fo": {
+		"inputmethods": [ "fo-normforms" ]
+	},
+	"fi": {
+		"inputmethods": [ "fi-transliteration" ]
+	},
+	"gom": {
+		"inputmethods": [ "hi-transliteration", "hi-inscript", "gom-inscript2" ]
+	},
+	"gu": {
+		"inputmethods": [ "gu-transliteration", "gu-inscript", "gu-inscript2", "gu-phonetic" ]
+	},
+	"he": {
+		"inputmethods": [ "he-standard-2012-extonly", "he-standard-2012" ]
+	},
+	"hi": {
+		"inputmethods": [ "hi-transliteration", "hi-inscript", "hi-bolnagri", "hi-phonetic", "hi-inscript2" ]
+	},
+	"hr": {
+		"inputmethods": [ "hr-kbd" ]
+	},
+	"hy": {
+		"inputmethods": [ "hy-kbd" ]
+	},
+	"hne": {
+		"inputmethods": [ "hi-transliteration" ]
+	},
+	"is": {
+		"inputmethods": [ "is-normforms" ]
+	},
+	"fonipa": {
+		"inputmethods": [ "ipa-sil" ]
+	},
+	"jv": {
+		"inputmethods": [ "jv-transliteration" ]
+	},
+	"ka": {
+		"inputmethods": [ "ka-transliteration", "ka-kbd" ]
+	},
+	"kbd": {
+		"inputmethods": [ "cyrl-palochka" ]
+	},
+	"kk": {
+		"inputmethods": [ "kk-kbd", "kk-arabic" ]
+	},
+	"kn": {
+		"inputmethods": [ "kn-transliteration", "kn-inscript", "kn-kgp", "kn-inscript2" ]
+	},
+	"ks": {
+		"inputmethods": [ "ks-inscript", "ks-kbd" ]
+	},
+	"kab": {
+		"inputmethods": [ "ber-tfng" ]
+	},
+	"lbe": {
+		"inputmethods": [ "cyrl-palochka" ]
+	},
+	"lez": {
+		"inputmethods": [ "cyrl-palochka" ]
+	},
+	"lo": {
+		"inputmethods": [ "lo-kbd" ]
+	},
+	"mai": {
+		"inputmethods": [ "mai-inscript", "mai-inscript2" ]
+	},
+	"mh": {
+		"inputmethods": [ "mh" ]
+	},
+	"ml": {
+		"inputmethods": [ "ml-transliteration", "ml-inscript", "ml-inscript2" ]
+	},
+	"mn": {
+		"inputmethods": [ "mn-cyrl" ]
+	},
+	"mni": {
+		"inputmethods": [ "mni-inscript2" ]
+	},
+	"mr": {
+		"inputmethods": [ "mr-transliteration", "mr-inscript2", "mr-inscript", "mr-phonetic" ]
+	},
+	"my": {
+		"inputmethods": [ "my-kbd", "my-xkb" ]
+	},
+	"ne": {
+		"inputmethods": [ "ne-transliteration", "ne-inscript2", "ne-inscript", "ne-rom", "ne-trad" ]
+	},
+	"new": {
+		"inputmethods": [ "hi-transliteration", "hi-inscript" ]
+	},
+	"no": {
+		"inputmethods": [ "no-normforms", "no-tildeforms" ]
+	},
+	"nb": {
+		"inputmethods": [ "no-normforms", "no-tildeforms" ]
+	},
+	"nn": {
+		"inputmethods": [ "no-normforms", "no-tildeforms" ]
+	},
+	"or": {
+		"inputmethods": [ "or-phonetic", "or-transliteration", "or-inscript", "or-inscript2", "or-lekhani" ]
+	},
+	"pa": {
+		"inputmethods": [ "pa-transliteration", "pa-inscript", "pa-phonetic", "pa-inscript2", "pa-jhelum" ]
+	},
+	"rif": {
+		"inputmethods": [ "ber-tfng" ]
+	},
+	"ru": {
+		"inputmethods": [ "ru-jcuken", "ru-kbd", "ru-phonetic", "ru-yawerty" ]
+	},
+	"sah": {
+		"inputmethods": [ "sah-transliteration" ]
+	},
+	"sa": {
+		"inputmethods": [ "sa-transliteration", "sa-inscript2", "sa-inscript", "sa-iast" ]
+	},
+	"sat": {
+		"inputmethods": [ "sat-inscript2"]
+	},
+	"sd": {
+		"inputmethods": [ "sd-inscript2" ]
+	},
+	"se": {
+		"inputmethods": [ "se-normforms" ]
+	},
+	"shi": {
+		"inputmethods": [ "ber-tfng" ]
+	},
+	"si": {
+		"inputmethods": [ "si-singlish", "si-wijesekara" ]
+	},
+	"sk": {
+		"inputmethods": [ "sk-kbd" ]
+	},
+	"sr": {
+		"inputmethods": [ "sr-kbd" ]
+	},
+	"sv": {
+		"inputmethods": [ "sv-normforms" ]
+	},
+	"ta": {
+		"inputmethods": [ "ta-transliteration", "ta-99", "ta-inscript", "ta-bamini", "ta-inscript2" ]
+	},
+	"tcy": {
+		"inputmethods": [ "kn-transliteration" ]
+	},
+	"te": {
+		"inputmethods": [ "te-transliteration", "te-inscript", "te-inscript2" ]
+	},
+	"th": {
+		"inputmethods": [ "th-kedmanee", "th-pattachote" ]
+	},
+	"tkr": {
+		"inputmethods": [ "cyrl-palochka" ]
+	},
+	"tzm": {
+		"inputmethods": [ "ber-tfng" ]
+	},
+	"udm": {
+		"inputmethods": [ "udm-alt" ]
+	},
+	"uk": {
+		"inputmethods": [ "uk-kbd" ]
+	},
+	"ug": {
+		"inputmethods": [ "ug-kbd" ]
+	},
+	"ur": {
+		"inputmethods": [ "ur-transliteration", "ur-phonetic" ]
+	},
+	"uz": {
+		"inputmethods": [ "uz-kbd" ]
+	}
+}

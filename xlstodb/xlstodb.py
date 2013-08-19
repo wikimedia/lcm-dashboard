@@ -45,7 +45,7 @@ query = """INSERT INTO langdetail ( langcode_iso, langcode_wmf, langname_eng, la
  
 test = u"\u2714"
 # iterate through ieach row
-for row_index in range(2,sheet.nrows): #sheet.nrows
+for row_index in range(135,sheet.nrows): #sheet.nrows
  
     # we could assign the values directly in the values format string but this is easier to read
     langcodeiso   = sheet.cell(row_index,0).value
