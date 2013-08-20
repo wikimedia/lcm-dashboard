@@ -1,3 +1,13 @@
+<?php
+	session_start();
+	if (isset($_SESSION['username'])) {
+		
+	}
+	else {
+		header('Location: index.php');
+	}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -75,7 +85,7 @@
 				</div>
 
 				<p align="center" id="slideleft">
-					<a class="btn btn-primary btn-large btn-block " style="width:284px;" href="inputlang.html">
+					<a class="btn btn-primary btn-large btn-block " style="width:284px;" href="inputlang.php">
 						Create new Entry
 					</a>
 				</p>

@@ -224,15 +224,17 @@
 
 
 	<div class='span9' id=''>
-		<div class="row-fluid">
+		<div id="loader" align="center">
+			<img src="img/ajax-loader.gif" align="center">
+		</div>
+		<div class="row-fluid" id="data">
 			<table class='table table-striped table-bordered' id='langlist'>
-
 			</table>
 		</div>
 	</div>
 	</div>
 </div>
-
+<!--
 	<script type="text/javascript">
 	$(function(){
 		$('td').click(function(){
@@ -243,5 +245,6 @@
 		})
 		})
 	</script>
+-->
 </body>
 </html>

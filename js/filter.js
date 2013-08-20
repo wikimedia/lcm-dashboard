@@ -1,5 +1,7 @@
 $(function() {
 	$(':checkbox').change(function(){
+		$('#data').hide();
+		$('#loader').show();
 		$this = $(this);
 		var parameter = $this.attr('id');
 		if(this.checked){
@@ -13,9 +15,13 @@ $(function() {
 				if($(this).attr('id') != parameter)
 					$(this).val($(this).val() + ' ' + parameter);
 			})
+
+			$(':checkbox').each(function(){
+				if($(this).attr('id') == parameter)
+					$(this).prop('checked', true);
+			})
 		}
 		else{
-
 			var q = $this.val().replace($this.attr('id'),'');
 			if(q[0] == ' '){
 				q = $this.val().replace($this.attr('id') + ' ','');
@@ -29,6 +35,11 @@ $(function() {
 					$(this).val($(this).val().replace(' '+parameter,''));
 			})
 
+			$(':checkbox').each(function(){
+				if($(this).attr('id') == parameter)
+					$(this).prop('checked', false);
+			})
+
 			$('#filtershow').find('#' + parameter).parent().remove();
 			filterLabel();
 		}
@@ -36,6 +47,8 @@ $(function() {
 
 	//For remove the filter binding click event
 	$('#filtershow').on('click','.closeFilter',function(){
+		$('#data').hide();
+		$('#loader').show();
 		$this = $(this);
 		var parameter = $this.attr('id');
 		//uncheck the checkbox
@@ -67,6 +80,8 @@ function filterdata(value){
 		type : 'POST',
 		async : 'false',
 		success : function(data){
+			$('#data').show();
+			$('#loader').hide();
 			langCount(data);
 		},
 		error : function(data){

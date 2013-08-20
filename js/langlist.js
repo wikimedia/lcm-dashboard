@@ -1,10 +1,14 @@
 $(function(){
+	$('#data').hide();
+	$('#loader').show();
 	$.ajax({
 		url : 'lib/langlist.php',
 		type : "POST",
 		dataType : 'JSON',
 		async : false,
 		success : function(data){
+			$('#data').show();
+			$('#loader').hide();
 			display_lang(data);
 			$('#langcount').html('<h3 class="text-info">' + (data.length)+ ' Languages </h3>')
 		},
@@ -31,7 +35,7 @@ function display_lang(data){
 }
 
 function values(data){
-	var td = "<td>" + 
+	var td = "<td><a href='language.php?" + data[3]+"'>" + 
 			 "<div class='row-fluid'>"+
 			 "<div class='span4'>"+
 			 "<p>" + data[0] + "</p>"+
@@ -40,7 +44,7 @@ function values(data){
 			 "<div class='span8'>"+
 			 "<p class='text-error'><strong>" + data[2] + "</strong></p>"+
 			 "<p class='text-info'>" + data[3] + "</p>"+
-			 "</div>"+
+			 "</div></a>"+
 			 "</td>" ;
 	return td;
 }

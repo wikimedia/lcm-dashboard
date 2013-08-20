@@ -64,14 +64,24 @@ $(function () {
 
 	$('.typeahead').on('typeahead:autocompleted', function (e, datum) {
 		//console.log(e);
-		hideDataAnimation();
+		if ($('.typeahead').parent().parent().attr('id') == 'noanimate') {
+
+		}
+		else {
+			hideDataAnimation();	
+		}
 		//console.log(datum.name);
 		languageDetail( datum.name );
 		//$('.typeahead').val(datum.name + ' - ' + datum.autonym + ' - ' + datum.iso);
 	});
 
 	$('.typeahead').on('typeahead:selected', function (e, datum) {
-		hideDataAnimation();
+		if ($('.typeahead').parent().parent().attr('id') == 'noanimate') {
+
+		}
+		else {
+			hideDataAnimation();	
+		}
 		languageDetail( datum.name );
 		//console.log(datum.name);
 		//$('.typeahead').val(datum.name + ' - ' + datum.autonym + ' - ' + datum.iso);
