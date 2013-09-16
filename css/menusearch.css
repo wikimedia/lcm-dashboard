@@ -70,10 +70,12 @@ p {
 #typeahead,
 .tt-query,
 #tt-hint {
-	width: 396px;
-	height: 30px;
-	padding: 8px 12px;
-	font-size: 24px;
+	/*width: 396px;*/
+	width: 300px;
+	height: 16px;
+	margin-bottom: 5px;
+	/*height: 30px;*/
+	font-size: 22px;
 	line-height: 30px;
 	border: 2px solid #ccc;
 	-webkit-border-radius: 8px;
@@ -101,7 +103,7 @@ p {
 }
 
 .tt-dropdown-menu {
-	width: 422px;
+	width: 320px;
 	margin-top: 12px;
 	padding: 8px 0;
 	background-color: #fff;

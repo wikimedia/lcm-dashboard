@@ -22,6 +22,8 @@
 	<link rel="stylesheet" type="text/css" href="css/boxed.css">
 	<link rel="stylesheet" type="text/css" href="jquery.ime/css/jquery.ime.css"/>
 	<link rel="stylesheet" type="text/css" href="css/example.css">
+	<link rel="stylesheet" type="text/css" href="css/menusearch.css">
+
 	
 	<script type="text/javascript" src="js/hogan.js"></script>
 	<script type="text/javascript" src="js/jquery-1.10.2-min.js"></script>
@@ -32,7 +34,7 @@
 	<script type="text/javascript" src="jquery.ime/src/jquery.ime.preferences.js"></script>
 	<script type="text/javascript" src="jquery.ime/src/jquery.ime.inputmethods.js"></script>
 	<script type="text/javascript" src="js/typeahead.js"></script>
-	<script type="text/javascript" src='js/langsearch.js'></script>
+	<script type="text/javascript" src="js/isosearch.js"></script>
 
 </head>
 
@@ -54,7 +56,12 @@
 			<div class="control-group">
 				<label  class="control-label">Languag Code (ISO)</label>
 				<div class="controls">
+						<div class="example example-twitter-oss">
+							<input class="typeahead" id="typeahead" type="text" placeholder="Language Code (ISO)" required name="langcode_iso" required data-trigger='focus' data-title="ISO - Code"  data-placement='right' data-content="Check the ISO code of language here <a href='http://www.loc.gov/standards/iso639-2/php/code_list.php' target='_blank'>ISO Code list" data-html='true'>
+						</div>
+					<!--
 					<input type="text" class="input-large" id="langcode_iso" required name="langcode_iso" required data-trigger='focus' data-title="ISO - Code"  data-placement='right' data-content="Check the ISO code of language here <a href='http://www.loc.gov/standards/iso639-2/php/code_list.php' target='_blank'>ISO Code list" data-html='true'>
+					-->
 				</div>
 			</div>
 
@@ -140,7 +147,7 @@
 			</div>
 			
 			<div class="control-group">
-				<label class="control-label">jquery.webfonts</label>
+				<label class="control-label">uls.webfonts</label>
 				<div class="controls">
 					<label class="radio inline"> <input type="radio" class="" name="jquery_webfonts" value="1" />Yes</label>
 					<label class="radio inline"> <input type="radio" class="" name="jquery_webfonts" value="0" />No</label>
@@ -220,7 +227,7 @@
 			<div class="control-group">
 				
 				<div class="controls">
-					<button class="btn btn-primary btn-large" value="submit" type="submit" id="submit">Submit</button>
+					<a class="btn btn-primary btn-large" id="submit">Submit</a>
 				</div>
 			</div>	
 			
@@ -232,6 +239,133 @@
 		</div>
 	</div>
 	
+	<!--Model -->
+
+	<!-- Modal -->
+	<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+			<h3 id="myModalLabel">Preview</h3>
+		</div>
+		<div class="modal-body">
+			<div class="container-fluid">
+	<div id="lang1" class="span4">
+		<div class="well">
+			<table class="table table-striped" id="language1">
+				<tr>
+					<td><label  class="control-label">Language Code (ISO)</label> </td>
+					<td><label  class="control-label" id = "langcode_iso1"></label></td>	
+				</tr>
+
+				<tr>
+					<td><label  class="control-label">Language Code (WMF)</label> </td>
+					<td><label  class="control-label"></label></td>	
+				</tr>
+
+				<tr>
+					<td><label  class="control-label">Language Name</label> </td>
+					<td><label  class="control-label"> </label></td>	
+				</tr>
+
+				<tr>
+					<td><label  class="control-label">Language Name(Autonyme)</label> </td>
+					<td><label  class="control-label"> </label></td>	
+				</tr>
+
+				<tr>
+					<td><label  class="control-label">Language Code (HTML)</label> </td>
+					<td><label  class="control-label"> <?php echo $_POST['langname_html']; ?></label></td>	
+				</tr>
+
+				<tr>
+					<td><label  class="control-label">Macro Languages</label> </td>
+					<td><label  class="control-label"> <?php echo $_POST['macro_lang']; ?></label></td>	
+				</tr>
+			</table>
+		</div>	
+	</div>
+
+	
+	<div id="lang2" class="span4">
+		<div class="well">
+			<table class="table table-striped" id="language2">
+				<tr>
+					<td><label  class="control-label"> WMF Project Status</label> </td>
+					<td><label  class="control-label">0</label></td>	
+				</tr>
+				<tr>
+					<td><label  class="control-label">Fallback code</label> </td>
+					<td><label  class="control-label"> 1</label></td>	
+				</tr>
+
+				<tr>
+					<td><label  class="control-label">Narayam</label> </td>
+					<td><label  class="control-label"> 0</label></td>	
+				</tr>
+
+				<tr>
+					<td><label  class="control-label">jquery.ime</label> </td>
+					<td><label  class="control-label"> 0</label></td>	
+				</tr>
+
+				<tr>
+					<td><label  class="control-label">Webfonts</label> </td>
+					<td><label  class="control-label">0</label></td>	
+				</tr>
+
+				<tr>
+					<td><label  class="control-label">jquery.webfonts</label> </td>
+					<td><label  class="control-label">0</label></td>	
+				</tr>
+
+				<tr>
+					<td><label  class="control-label">i18n mw core</label> </td>
+					<td><label  class="control-label">0</label></td>	
+				</tr>
+
+				<tr>
+					<td><label  class="control-label">jquery.i18n</label> </td>
+					<td><label  class="control-label">0</label></td>	
+				</tr>
+
+				<tr>
+					<td><label  class="control-label">jquery.uls</label> </td>
+					<td><label  class="control-label">0</label></td>	
+				</tr>
+
+				<tr>
+					<td><label  class="control-label">Translate</label> </td>
+					<td><label  class="control-label">1</label></td>	
+				</tr>
+
+				<tr>
+					<td><label  class="control-label">Dictionary</label> </td>
+					<td><label  class="control-label">0</label></td>	
+				</tr>
+
+				<tr>
+					<td><label  class="control-label">Spellchecker</label> </td>
+					<td><label  class="control-label">0</label></td>	
+				</tr>
+
+				<tr>
+					<td><label  class="control-label">Glossary</label> </td>
+					<td><label  class="control-label">0</label></td>	
+				</tr>
+
+				<tr>
+					<td><label  class="control-label">Feature/incubator</label> </td>
+					<td><label  class="control-label">Feature</label></td>	
+				</tr>
+			</table>
+		</div>	
+	</div>
+		</div>
+		<div class="modal-footer">
+			<button class="btn" data-dismiss="modal" aria-hidden="true">Edit</button>
+			<button class="btn btn-primary" id="save">Save changes</button>
+		</div>
+	</div>
 	
 	<link href="jquery.ime/css/jquery.ime.css" rel="stylesheet" />
 	<script src="jquery.ime/src/jquery.ime.js"></script>
@@ -243,17 +377,28 @@
 			$("#langcode_iso").popover();
 			$("#langname_autonym").ime();
 
-			
-			
-			var dropdown1 ="<li>Harsh</li>";
-  						
-  			$('#dLabel').click(function() {
-	    			//alert("bingo");
-	    			console.log(dropdown1);
-	    				    			
-	    			$('#dLabel').append(dropdown1);
-	    			//$('.dropdown-toggle').dropdown('show');
-	    		});
+			$('#submit').click(function(){
+				if ( $('#langcode_iso').val() == '' ) {
+					console.log($('#langcode_iso').val());
+					alert('Enter ISO code of Language');
+				}
+				else if ( $('#langcode_wmf').val() == ''){
+					console.log('1');
+					alert('Enter WMF code of Language');
+				}
+				else{
+					//$('form').submit();
+					console.log($('#langcode_wmf').val());
+					$('#langcode_iso1').text($('#langcode_iso').val());	
+					$('#langcode_wmf1').text($('#langcode_wmf').val());
+					$('#myModal').modal('show'); 
+					
+				}
+			})
+
+			$('#save').click(function(event) {
+				$('form').submit();
+			});
 		})
 	</script>
 </body>

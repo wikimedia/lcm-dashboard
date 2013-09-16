@@ -11,9 +11,16 @@
 			
 			<div class="nav-collapse collapse">	
 				<ul class="nav pull-right">
+					<li>
+						<form class="navbar-search pull-left">
+							<div class="example example-twitter-oss">
+								<input class="typeahead" id="typeahead" type="text" placeholder="Language Search" >
+							</div>
+						</form>
+					</li>
 					<li><a href="index.php">Home</a></li>
 					<li><a href="#">About Us</a></li>
-					<li><a href="#">Languages</a></li>
+					<li><a href="langfilter.php">Languages</a></li>
 					<li class="dropdown">
 						<a class="dropdown-toggle" href="#" data-toggle="dropdown">Sign In <strong class="caret"></strong></a>
 						<div class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
@@ -32,3 +39,18 @@
 		</div>
 	</div>
 </div>
+<script type="text/javascript">
+	$('.typeahead').on('typeahead:selected', function (e, datum) {
+		if ($('.typeahead').parent().parent().attr('id') == 'noanimate') {
+
+		}
+		else {
+			hideDataAnimation();	
+		}
+		//alert(datum.name);
+		//window.location.href = 
+		window.location.href = 'language.php?'+datum.name;
+		//console.log(datum.name);
+		//$('.typeahead').val(datum.name + ' - ' + datum.autonym + ' - ' + datum.iso);
+	});
+</script>

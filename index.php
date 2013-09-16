@@ -16,6 +16,7 @@
 	<link rel="stylesheet" type="text/css" href="css/boxed.css">
 	<link rel="stylesheet" type="text/css" href="jquery.ime/css/jquery.ime.css"/>
 	<link rel="stylesheet" type="text/css" href="css/example.css">
+	<link rel="stylesheet" type="text/css" href="css/menusearch.css">
 	
 	<script type="text/javascript" src="js/hogan.js"></script>
 	<script type="text/javascript" src="js/jquery-1.10.2-min.js"></script>
@@ -26,6 +27,7 @@
 	<script type="text/javascript" src="jquery.ime/src/jquery.ime.preferences.js"></script>
 	<script type="text/javascript" src="jquery.ime/src/jquery.ime.inputmethods.js"></script>
 	<script type="text/javascript" src="js/typeahead.js"></script>
+	<script type="text/javascript" src='js/langsearch.js'></script>
 
 </head>
 <body>

@@ -36,36 +36,7 @@
 
 </head>
 
-<?php
-/*
-echo $_POST['langcode_iso'];
 
-echo $_POST['langcode_iso'];
-echo $_POST['langcode_wmf'];
-echo $_POST['langname_eng'];
-echo $_POST['langname_autonym'];
-echo $_POST['langname_html'];
-echo $_POST['macro_lang'];
-echo $_POST['wmf_proj_status'];
-echo $_POST['fallback_code'];
-echo $_POST['narayam'];
-echo $_POST['jquery_ime'];
-echo $_POST['webfonts'];
-echo $_POST['jquery_webfonts'];
-echo $_POST['i18n_mw_core'];
-echo $_POST['jquery_i18n'];
-echo $_POST['jquery_uls'];
-echo $_POST['translate'];
-echo $_POST['dictionary'];
-echo $_POST['spellchecker'];
-echo $_POST['glossary'];
-echo $_POST['f_or_i'];
-
-$test = $_POST['f_or_i'];
-*/
-//echo("<div class='alert alert-success' align='center'>Succesfully stored in database</div>");
-
-?>
 <body>
 
 	<?php
@@ -78,22 +49,62 @@ $test = $_POST['f_or_i'];
 	?>
 
 	<?php
+		$langcode_iso = $_POST['langcode_iso'];
 
+		$langcode_iso = $_POST['langcode_iso'];
+		$langcode_wmf = $_POST['langcode_wmf'] ? $_POST['langcode_wmf'] : '-';
+		$langname_eng = $_POST['langname_eng'] ? $_POST['langname_eng'] : '-';
+		$langname_autonym = $_POST['langname_autonym'] ? $_POST['langname_autonym'] : '-';
+		$langname_html = $_POST['langname_html'] ? $_POST['langname_html'] : '-';
+		$macro_lang = $_POST['macro_lang'] ?  $_POST['macro_lang'] : '-';
+		$wmf_proj_status = $_POST['wmf_proj_status'] ? '1' : '0';
+		$fallback_code = $_POST['fallback_code'] ? $_POST['fallback_code'] : '-';
+		$narayam = $_POST['narayam']  ? '1' : '0';
+		$jquery_ime = $_POST['jquery_ime'] ? '1' : '0';
+		$webfonts = $_POST['webfonts'] ? '1' : '0';
+		$jquery_webfonts = $_POST['jquery_webfonts'] ? '1' : '0';
+		$i18n_mw_core = $_POST['i18n_mw_core'] ? '1' : '0';
+		$jquery_uls = $_POST['jquery_i18n'] ? '1' : '0';
+		$jquery_uls = $_POST['jquery_uls'] ? '1' : '0';
+		$translate = $_POST['translate'] ? '1' : '0';
+		$dictionary = $_POST['dictionary'] ? '1' : '0';
+		$spellchecker = $_POST['spellchecker'] ? '1' : '0';
+		$glossary = $_POST['glossary'] ? '1' : '0';
+		$f_or_i = $_POST['f_or_i'] ? '1' : '0';
+
+		$test = $_POST['f_or_i'];
+
+		require 'lib/dbconnect.php';
+
+		$con = mysql_connect($host,$user,$pass);
+		$dbs = mysql_select_db($databaseName, $con);
+//langcodeiso, langcodewmf, langname, langname_a, langcodehtml, macro_lang, wmf_pro_status, fallback_code, narayam, jquery_ime, webfonts, jquery_webfonts, i18n_mw_core, jquery_i18n, jquery_uls, translate1, dictionary, spellchecker, glossary ,froi)
+
+		$query = "INSERT into langdetail(langcode_iso, langcode_wmf, langname_eng, langname_autonym, langname_html, macro_lang, wmf_proj_status, fallback_code, narayam, jquery_ime, webfonts, jquery_webfonts, i18n_mw_core, jquery_i18n, jquery_uls, translate, dictionary, spellchecker, glossary ,f_or_i) values('$langcode_iso', '$langcode_wmf', '$langname_eng', '$langname_autonym', '$langname_html', '$macro_lang', '$wmf_proj_status', '$fallback_code', '$narayam', '$jquery_ime', '$webfonts', '$jquery_webfonts', '$i18n_mw_core', '$jquery_i18n', '$jquery_uls', '$translate', '$dictionary', '$spellchecker', '$glossary' ,'$f_or_i')";
+/*
+		if (mysql_query($query)){
+			exec('php script/nametoautonym.php');
+			echo("<div class='alert alert-success' align='center'>Successfully stored in database</div>");
+		}
+		else{
+			echo("<div class='alert alert-danger' align='center'>Fail to store in database</div>");
+		}
+*/
+		//echo("<div class='alert alert-success' align='center'>Succesfully stored in database</div>");
 	?>
 
-	<div class='alert alert-success' align='center'>Succesfully stored in database</div>
 	<div class="container-fluid">
 	<div id="lang1" class="span6">
 		<div class="well">
 			<table class="table table-striped" id="language1">
 				<tr>
 					<td><label  class="control-label">Language Code (ISO)</label> </td>
-					<td><label  class="control-label"> <?php echo $_POST['langcode_iso']; ?></label></td>	
+					<td><label  class="control-label"> <?php echo $_POST['langcode_iso'] ? $_POST['langcode_iso'] : '-' ; ?></label></td>	
 				</tr>
 
 				<tr>
 					<td><label  class="control-label">Language Code (WMF)</label> </td>
-					<td><label  class="control-label"> <?php echo $_POST['langcode_wmf']; ?></label></td>	
+					<td><label  class="control-label"> <?php echo $_POST['langcode_wmf'] ? $_POST['langcode_wmf'] : '-'; ?></label></td>	
 				</tr>
 
 				<tr>

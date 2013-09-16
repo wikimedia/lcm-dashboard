@@ -26,7 +26,7 @@ function display_lang(data){
 	$('table').append('<tr>');
 		for(var i=0; i < data.length ; i++){
 			var tr = $("table tr:last");
-			if(tr.find('td').length == 3){
+			if(tr.find('td').length == 2){
 				$('table').append('<tr>');
 				var tr = $("table tr:last");
 			}

@@ -14,35 +14,6 @@ $(function () {
 	$('.edit').tooltip();
 
 	//Use of typehead plugin for searching + suggestion facility
-	/*
-	$('#input').typeahead ({
-		source : function ( query, process ){
-			$.ajax({
-				url: 'lib/langsearchshow.php',
-				type: 'POST',
-				dataType: 'json',
-				data: 'query=' + query,
-				complete: function(xhr, textStatus) {
-					//called when complete
-				},
-				success: function(data, textStatus, xhr) {
-					//called when successful
-					process(data);
-				},
-				error: function(xhr, textStatus, errorThrown) {
-					//called when there is an error
-					console.log( errorThrown );
-				}
-			});
-		},
-
-		updater : function (lang) {
-			hideDataAnimation();
-			languageDetail( lang );
-			return lang;
-		}
-	}); */
-
 	$('#typeahead').ime();
 	$('.example-twitter-oss .typeahead').typeahead({
 		name: 'Language Name',
