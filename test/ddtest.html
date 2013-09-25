@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<meta http-equiv="content-type" content="text-html; charset=utf-8">	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link href="../css/bootstrap.css" rel="stylesheet" media="screen">
+	<link href="../css/bootstrap-responsive.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap-switch.css">
+	<!--<link rel="stylesheet" type="text/css" href="example.css"> -->
+	<script src="../js/jquery-1.10.2-min.js"></script>
+	<script src="../js/bootstrap.js"></script>
+	<script type="text/javascript" src="../js/bootstrap-switch.js"></script>
+	<style type="text/css">
+		.test{
+			margin-top: -9px;
+			margin-bottom: -5px;
+		}
+		.tes{
+			margin-top: -5px;
+			margin-bottom: -2px;
+		}
+		#boxed {
+			-webkit-border-horizontal-spacing: 0px;
+			-webkit-border-vertical-spacing: 0px;
+			background-color: rgba(0, 0, 0, 0);
+			border-bottom-color: rgb(229, 229, 229);
+			border-bottom-left-radius: 4px;
+			border-bottom-right-radius: 4px;
+			border-bottom-style: solid;
+			border-bottom-width: 1px;
+			border-collapse: separate;
+			border-left-color: rgb(229, 229, 229);
+			border-left-style: solid;
+			border-left-width: 1px;
+			border-right-color: rgb(229, 229, 229);
+			border-right-style: solid;
+			border-right-width: 1px;
+			border-top-color: rgb(229, 229, 229);
+			border-top-left-radius: 4px;
+			border-top-right-radius: 4px;
+			border-top-style: solid;
+			border-top-width: 1px;
+			color: rgb(51, 51, 51);
+			display: inline-block;
+			font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+			font-size: 14px;
+			min-height:38px;
+			height: auto;
+			line-height: 28px;
+			margin-bottom: 0px;
+			margin-left: 0px;
+			margin-right: 0px;
+			margin-top: 0px;
+			padding-bottom: 4px;
+			padding-left: 15px;
+			padding-right: 15px;
+			padding-top: 4px;
+			text-align: left;
+			vertical-align: middle;
+			/*
+			width: 100%;
+			*width: 99.94680851063829%;
+			*/
+			margin-bottom: 2px;
+
+		}
+
+		
+
+		#tes1{
+			margin-top: -4px;
+		}
+	</style>
+
+	
+</head>
+<body>
+	<!-- Dropdown -->
+	<div class='span12 well'>
+		New Dropdown Proposed Scheme
+	</div>
+	<div class="span12 row-fluid">
+	<div class="span5 offset1 row-fluid">			
+		<div class='span12 row-fluid' id='boxed'>
+			<div class="span6 row-fluid">Language Code (ISO)</div>
+			<div class="span4 row-fluid" id="langcode_iso">gu</div>
+			<a class="btn btn-primary edit" id="tes1" href="" data-toggle='modal' data-placement='right' title='Edit' href='' data-dismiss='modal'><i class="icon-pencil icon-white"></i></a>
+		</div>
+
+		<div class='span12' id='boxed'>
+			<div class="span6">Language Code (WMF)</div>
+			<div class="span4" id="langcode_wmf">gu</div>
+			<a class="btn btn-primary edit" id="tes1" href="" data-toggle='modal' data-placement='right' title='Edit' href='' data-dismiss='modal'><i class="icon-pencil icon-white"></i></a>
+		</div>
+
+		<div class='span12' id='boxed'>
+			<div class="span6">Language Name</div>
+			<div class="span4" id="langname_eng">Gujarati</div>
+			<a class="btn btn-primary edit" id="tes1" href="" data-toggle='modal' data-placement='right' title='Edit' href='' data-dismiss='modal'><i class="icon-pencil icon-white"></i></a>
+		</div>
+
+		<div class='span12' id='boxed'>
+			<div class="span6">Language Name (Autonym)</div>
+			<div class="span4" id="langname_autonym">ગુજરાતી</div>
+			<a class="btn btn-primary edit" id="tes1" href="" data-toggle='modal' data-placement='right' title='Edit' href='' data-dismiss='modal'><i class="icon-pencil icon-white"></i></a>
+		</div>
+
+		<div class='span12' id='boxed'>
+			<div class="span6">Language Code (HTML)</div>
+			<div class="span4" id="langname_html">gu</div>
+			<a class="btn btn-primary edit edit" id="tes1" href="" data-toggle='modal' data-placement='right' title='Edit' href='' data-dismiss='modal'><i class="icon-pencil icon-white"></i></a>
+		</div>
+
+		<div class='span12' id='boxed'>
+			<div class="span6">Fallback code</div>
+			<div class="span4">-</div>
+			<a class="btn btn-primary edit" id="tes1" href="" data-toggle='modal' data-placement='right' title='Edit' href='' data-dismiss='modal'><i class="icon-pencil icon-white"></i></a>
+		</div>
+
+		<div class='span12 row-fluid' id='boxed'>
+			<div class="span6 row-fluid">Macro Language</div>
+			<div class="span3 row-fluid" id=""><i class="icon-ok"></i></div>
+			<div id="normal-toggle-button row-fluid" data-on-label="Yes" data-off-label="No" data-on="primary" data-off="danger" class="switch test">
+				<input type="checkbox" checked="checked">
+			</div>
+		</div>
+
+		<div class='span12' id='boxed'>
+			<div class="span8">WMF Project Status</div>
+			<div class="span2" value="yes" id="wmf_proj_status"><i class="icon-ok"></i></div>
+			<div id="normal-toggle-button" data-on-label="Yes" data-off-label="No" data-on="primary" data-off="danger" class="switch test">
+				<input type="checkbox" checked="checked">
+			</div>
+		</div>
+
+		<div class='span12' id='boxed'>
+			<div class="span8">Translator</div>
+			<div class="span2" value="yes"><i class="icon-ok"></i></div>
+			<div id="normal-toggle-button" data-on-label="Yes" data-off-label="No" data-on="primary" data-off="danger" class="switch test">
+				<input type="checkbox" checked="checked">
+			</div>
+		</div>	
+
+		<div class='span12' id='boxed'>
+			<div class="span8">Dictionary</div>
+			<div class="span2" value="yes"><i class="icon-ok"></i></div>
+			<div id="normal-toggle-button" data-on-label="Yes" data-off-label="No" data-on="primary" data-off="danger" class="switch test">
+				<input type="checkbox" checked="checked">
+			</div>
+		</div>
+
+		<div class='span12' id='boxed'>
+			<div class="span8">Spellchecker</div>
+			<div class="span2" value="yes"><i class="icon-remove"></i></div>
+			<div id="normal-toggle-button" data-on-label="Yes" data-off-label="No" data-on="primary" data-off="danger" class="switch test">
+				<input type="checkbox" >
+			</div>
+		</div>
+
+		<div class='span12' id='boxed'>
+			<div class="span8">Glossary</div>
+			<div class="span2" value="yes"><i class="icon-remove"></i></div>
+			<div id="normal-toggle-button" data-on-label="Yes" data-off-label="No" data-on="primary" data-off="danger" class="switch test">
+				<input type="checkbox" >
+			</div>
+		</div>
+
+		<div class='span12' id='boxed'>
+			<div class="span6">Featured</div>
+			<div class="span2" value="yes"><i class="icon-ok"></i></div>
+			<div id="normal-toggle-button" data-on-label="Yes" data-off-label="No" data-on="primary" data-off="danger" class="switch test">
+				<input type="checkbox" checked="checked">
+			</div>
+		</div>
+			
+	</div>
+	<!-- Dropdown Over -->
+
+
+	<div class='span5 row-fluid'>
+
+		<div class="accordion span12 row-fluid" id="accordion2">
+
+			<!-- Heading 1 -->
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a class="accordion-toggle" data-toggle="collapse" data-parent="#" href="#uls">
+						Universal Language Selector
+					</a>
+				</div>
+				<div id="uls" class="accordion-body collapse in">
+					<div class="accordion-inner">						
+						<div class="span8">Webfonts</div>
+						<div class="span3" value="yes"><i class="icon-ok"></i></div>
+						<div id="normal-toggle-button" data-on-label="Yes" data-off-label="No" data-on="primary" data-off="danger" class="switch test">
+						    <input type="checkbox" checked="unchecked">
+						</div>
+					</div>
+
+					<div class="accordion-inner">
+						<div class="span8">Input Methods</div>
+						<div class="span3" value="no"><i class="icon-remove"></i></div>
+						<div id="normal-toggle-button" data-on-label="Yes" data-off-label="No" data-on="primary" data-off="danger" class="switch test">
+						    <input type="checkbox" >
+						</div>
+					</div>
+
+					<div class="accordion-inner">
+						<div class="span8">Internationalization Support</div>
+						<div class="span2" value="yes"><i class="icon-ok"></i></div>
+						<div id="normal-toggle-button" data-on-label="Yes" data-off-label="No" data-on="primary" data-off="danger" class="switch test">
+						    <input type="checkbox" checked="checked">
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Heading 2 -->
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a class="accordion-toggle" data-toggle="collapse" data-parent="#" href="#milkshake">
+						Project Milkshake
+					</a>
+				</div>
+
+				<div id="milkshake" class="accordion-body collapse">
+					<div class="accordion-inner">
+						<div class="span8">Input Method Library</div>
+						<div class="span2" value="yes"><i class="icon-ok"></i></div>
+						<div id="normal-toggle-button" data-on-label="Yes" data-off-label="No" data-on="primary" data-off="danger" class="switch test">
+						    <input type="checkbox" checked="checked">
+						</div>
+					</div>
+
+					<div class="accordion-inner">
+						<div class="span8">Webfont Library</div>
+						<div class="span2" value="yes"><i class="icon-ok"></i></div>
+						<div id="normal-toggle-button" data-on-label="Yes" data-off-label="No" data-on="primary" data-off="danger" class="switch test">
+						    <input type="checkbox" checked="checked">
+						</div>
+					</div>
+
+					<div class="accordion-inner">
+						<div class="span8">i18n Library</div>
+						<div class="span2" value="yes"><i class="icon-ok"></i></div>
+						<div id="normal-toggle-button" data-on-label="Yes" data-off-label="No" data-on="primary" data-off="danger" class="switch test">
+						    <input type="checkbox" >
+						</div>
+					</div>
+
+					<div class="accordion-inner">
+						<div class="span8">ULS Library</div>
+						<div class="span2" value="yes"><i class="icon-ok"></i></div>
+						<div id="normal-toggle-button" data-on-label="Yes" data-off-label="No" data-on="primary" data-off="danger" class="switch test">
+						    <input type="checkbox" >
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Heading 3 -->
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a class="accordion-toggle" data-toggle="collapse" data-parent="#" href="#legacy_ext">
+						Legacy Extensions
+					</a>
+				</div>
+				<div id="legacy_ext" class="accordion-body collapse">
+					<div class="accordion-inner">
+						<div class="span8">Narayam</div>
+						<div class="span2" value="yes"><i class="icon-ok"></i></div>
+						<div id="normal-toggle-button" data-on-label="Yes" data-off-label="No" data-on="primary" data-off="danger" class="switch test">
+						    <input type="checkbox" >
+						</div>
+					</div>
+
+					<div class="accordion-inner">
+						<div class="span8">Webfonts</div>
+						<div class="span2" value="yes"><i class="icon-ok"></i></div>
+						<div id="normal-toggle-button" data-on-label="Yes" data-off-label="No" data-on="primary" data-off="danger" class="switch test">
+						    <input type="checkbox" >
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Heading 4 -->
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a class="accordion-toggle" data-toggle="collapse" data-parent="#" href="#more_info">
+						More Information on Bengali
+					</a>
+				</div>
+				<div id="more_info" class="accordion-body collapse">
+					<div class="accordion-inner">
+						<div class="span8">Webfonts</div>
+						<div class="span2" value="yes" id="fontname">Lohit Bengali</div>
+						<button class="btn btn-primary test binary"><i class="icon-pencil icon-white"></i></button>
+					</div>
+
+					<div class="accordion-inner">
+						<div class="span8">Input Methods</div>
+						<div class="span2" value="yes" id="inputmethod">Inscript</div>
+						<button class="btn btn-primary test binary"><i class="icon-pencil icon-white"></i></button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- DIV over of second part -->
+</div>
+	</br></br>
+<div class="well span12">Filter UI demo</div>
+<!-- =========================================== Filter checkbox ========================================== -->
+	<div class="row-fluid class12">
+		<div class="span1"></div>
+		<div class='span4 row-fluid'>
+
+		<div class="accordion span12 row-fluid" id="accordion2">
+
+			<!-- Heading 1 -->
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a class="accordion-toggle" data-toggle="collapse" data-parent="#" href="#uls">
+						Universal Language Selector
+						<i class="icon-repeat" style="margin-left:110px;"></i>
+					</a>
+				</div>
+				<div id="uls" class="accordion-body collapse in">
+					<div class="accordion-inner">						
+						<div class="span8">Webfonts</div>
+						<div id="normal-toggle-button" data-on-label="Yes" data-off-label="No" data-on="primary" data-off="danger" class="switch test">
+						    <input type="checkbox" checked="unchecked">
+						</div>
+					</div>
+
+					<div class="accordion-inner">
+						<div class="span8">Input Methods</div>
+						<div id="normal-toggle-button" data-on-label="Yes" data-off-label="No" data-on="primary" data-off="danger" class="switch test">
+						    <input type="checkbox" >
+						</div>
+					</div>
+
+					<div class="accordion-inner">
+						<div class="span8">Internationalization Support</div>
+						<div id="normal-toggle-button" data-on-label="Yes" data-off-label="No" data-on="primary" data-off="danger" class="switch test">
+						    <input type="checkbox" checked="checked">
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Heading 2 -->
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a class="accordion-toggle" data-toggle="collapse" data-parent="#" href="#">
+						Project Milkshake
+						<i class="icon-repeat" style="margin-left:180px;"></i>
+					</a>
+				</div>
+
+				<div id="milkshake" class="accordion-body ">
+					<div class="accordion-inner">
+						<div class="span8">Input Method Library</div>
+						<div id="normal-toggle-button" data-on-label="Yes" data-off-label="No" data-on="primary" data-off="danger" class="switch test">
+						    <input type="checkbox" checked="checked">
+						</div>
+					</div>
+
+					<div class="accordion-inner">
+						<div class="span8">Webfont Library</div>
+						<div id="normal-toggle-button" data-on-label="Yes" data-off-label="No" data-on="primary" data-off="danger" class="switch test">
+						    <input type="checkbox" checked="checked">
+						</div>
+					</div>
+
+					<div class="accordion-inner">
+						<div class="span8">i18n Library</div>
+						<div id="normal-toggle-button" data-on-label="Yes" data-off-label="No" data-on="primary" data-off="danger" class="switch test">
+						    <input type="checkbox" >
+						</div>
+					</div>
+
+					<div class="accordion-inner">
+						<div class="span8">ULS Library</div>
+						<div id="normal-toggle-button" data-on-label="Yes" data-off-label="No" data-on="primary" data-off="danger" class="switch test">
+						    <input type="checkbox" >
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Heading 3 -->
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a class="accordion-toggle" data-toggle="collapse" data-parent="#" href="#">
+						Legacy Extensions
+						<i class="icon-repeat" style="margin-left:180px;"></i>
+					</a>
+				</div>
+				<div id="legacy_ext" class="accordion-body">
+					<div class="accordion-inner">
+						<div class="span8">Narayam</div>
+						<div id="normal-toggle-button" data-on-label="Yes" data-off-label="No" data-on="primary" data-off="danger" class="switch test">
+						    <input type="checkbox" >
+						</div>
+					</div>
+
+					<div class="accordion-inner">
+						<div class="span8">Webfonts</div>
+						<div id="normal-toggle-button" data-on-label="Yes" data-off-label="No" data-on="primary" data-off="danger" class="switch test">
+						    <input type="checkbox" >
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<div class='span4 row-fluid'>
+
+		<div class="accordion span12 row-fluid" id="accordion2">
+
+			<!-- Heading 1 -->
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a class="accordion-toggle" data-toggle="collapse" data-parent="#" href="#">
+						Universal Language Selector
+						<i class="icon-repeat" style="margin-left:120px;"></i>
+					</a>
+				</div>
+				<div id="uls" class="accordion-body">
+					<div class="accordion-inner">						
+						<div class="span10">Webfonts</div>
+						<div id="normal-toggle-button" data-on-label="Yes" data-off-label="No" data-on="primary" data-off="danger" class="">
+						    <input type="checkbox" checked="unchecked">
+						</div>
+					</div>
+
+					<div class="accordion-inner">
+						<div class="span10">Input Methods</div>
+						<div id="normal-toggle-button" data-on-label="Yes" data-off-label="No" data-on="primary" data-off="danger" class="">
+						    <input type="checkbox" >
+						</div>
+					</div>
+
+					<div class="accordion-inner">
+						<div class="span10">Internationalization Support</div>
+						<div id="normal-toggle-button" data-on-label="Yes" data-off-label="No" data-on="primary" data-off="danger" class="">
+						    <input type="checkbox" checked="checked">
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Heading 2 -->
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a class="accordion-toggle" data-toggle="collapse" data-parent="#" href="#">
+						Project Milkshake
+						<i class="icon-repeat" style="margin-left:190px;"></i>
+					</a>
+				</div>
+
+				<div id="milkshake" class="accordion-body ">
+					<div class="accordion-inner">
+						<div class="span10">Input Method Library</div>
+						<div id="normal-toggle-button" data-on-label="Yes" data-off-label="No" data-on="primary" data-off="danger" class="">
+						    <input type="checkbox" checked="checked">
+						</div>
+					</div>
+
+					<div class="accordion-inner">
+						<div class="span10">Webfont Library</div>
+						<div id="normal-toggle-button" data-on-label="Yes" data-off-label="No" data-on="primary" data-off="danger" class="">
+						    <input type="checkbox" checked="checked">
+						</div>
+					</div>
+
+					<div class="accordion-inner">
+						<div class="span10">i18n Library</div>
+						<div id="normal-toggle-button" data-on-label="Yes" data-off-label="No" data-on="primary" data-off="danger" class="">
+						    <input type="checkbox" >
+						</div>
+					</div>
+
+					<div class="accordion-inner">
+						<div class="span10">ULS Library</div>
+						<div id="normal-toggle-button" data-on-label="Yes" data-off-label="No" data-on="primary" data-off="danger" class="">
+						    <input type="checkbox" >
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Heading 3 -->
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a class="accordion-toggle" data-toggle="collapse" data-parent="#" href="#">
+						Legacy Extensions<t></t>
+						<i class="icon-repeat" style="margin-left:180px;"></i>
+					</a>
+					
+				</div>
+				<div id="legacy_ext" class="accordion-body ">
+					<div class="accordion-inner">
+						<div class="span10">Narayam</div>
+						<div id="normal-toggle-button" data-on-label="Yes" data-off-label="No" data-on="primary" data-off="danger" class="">
+						    <input type="checkbox" >
+						</div>
+					</div>
+
+					<div class="accordion-inner">
+						<div class="span10">Webfonts</div>
+						<div id="normal-toggle-button" data-on-label="Yes" data-off-label="No" data-on="primary" data-off="danger" class="">
+						    <input type="checkbox" >
+						</div>
+					</div>
+				</div>
+			</div>
+
+	</div>
+	</div>
+</div>
+<footer>
+Harsh Kothari
+</footer>
+
+<!-- Model -->
+<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+		<h3 id="myModalLabel"></h3>
+	</div>
+	<div class="modal-body">
+		<p id="oldname" align="center"></p>
+		<legend></legend>
+		<p id="newvalue" align="center"></p>
+		<p align='center'><input type="text" class="input-large" id="changeval" name="changeval" align='center'/></p>
+		<!-- complete -->
+	</div>
+	<div class="modal-footer">
+		<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+		<button class="btn btn-primary" id="save">Save changes</button>
+	</div>
+</div>
+<!-- Model over -->
+ <script type="text/javascript">
+ 	$(function() {
+ 		$('.span2').addClass('span3').removeClass('span2');
+ 		$('.span8').addClass('span6').removeClass('span8');
+ 		$(".binary").click(function(){
+ 			
+ 			$this = $(this);
+ 			var $valdiv = $this.siblings('.span4');
+ 			var val = $valdiv.attr('value');
+ 			if (val == "yes") {
+ 				console.log('1');
+ 				$valdiv.attr('value','no');
+ 				$valdiv.children().removeClass('icon-ok').addClass('icon-remove');
+ 				$this.removeClass('btn-success').addClass('btn-danger');
+ 			}
+ 			else{
+ 				console.log('2');
+ 				$valdiv.attr('value','yes');
+ 				$valdiv.children().removeClass('icon-remove').addClass('icon-ok');
+ 				$this.removeClass('btn-danger').addClass('btn-success');
+ 			}
+ 			
+ 		})
+
+ 		$('.edit').click(function(){
+                $('#myModal').modal('show');
+                $this = $(this);
+    				//console.log($this);
+    			$divkey = $this.siblings('.span6');
+    			$divvalue = $this.siblings('.span4');
+    			console.log($divkey.text() + $divvalue.text());
+    			$('#oldname').html("Current value of "+$divkey.text() + " : <span style='color:red;'> <b>" + $divvalue.text()+ "</b></span>");
+    			$('#newvalue').text('New value of ' + $divkey.text());
+    			$('#myModalLabel').text($divkey.text());
+    			$('#save').attr('id',$divvalue.attr('id'));
+
+    	})
+             
+
+             $('#save').click(function(){
+                $('#myModal').modal('hide');
+               	$this = $(this);
+               	var newid = $this.attr('id');
+                var oldval = $divvalue.text();
+                var newval = $('#changeval').val();
+               	$('#changeval').val(null);
+               	$divvalue.text(newval);
+                //console.log(newval);
+                $('#boxbutton').after("<div class='alert alert-success' align='center' id='successalert'> The value of " + $td1.text() + " is changed to " + newval + " from " + oldval +"</div>");
+                $('#successalert').hide();
+                $('#successalert').slideDown('slow').delay(3000).slideUp('slow');
+
+            }) 
+            
+            $('.switch').bootstrapSwitch();
+            $('.switch').on('switch-change', function (e, data) {
+            	$this = $(data.el);
+    			var $el = $(data.el)
+      			, value = data.value;
+    			console.log(e, $el, value);
+    			var $valdiv = $this.parent().parent().siblings('.span3');
+ 				var val = $valdiv.attr('value');
+    			if(value == false){
+    				console.log(1);
+    				$valdiv.attr('value','no');
+ 					$valdiv.children().removeClass('icon-ok').addClass('icon-remove');
+ 					console.log($valdiv);
+    			}
+    			else{
+    				console.log(1);
+    				$valdiv.attr('value','yes');
+ 					$valdiv.children().removeClass('icon-remove').addClass('icon-ok');
+    			}
+			});
+
+            $.getJSON('../data/langtofontmap.json')
+            	.done(function(data){
+            		$.each(data, function(langcode, font) {
+            			if (langcode == 'gu'){
+            				$('#fontname').text(font);
+            			}
+            		})
+            		//console.log(data);
+            	})
+ 	})
+ </script>
+<!--
+</br>
+<div class="span1 offset4 well well-small">
+	<button class="btn btn-success">Yes</button>
+	<button class="btn btn-danger"></button>
+</div>
+
+<div id="normal-toggle-button" class="switch">
+    <input type="checkbox" checked="checked">
+</div>
+-->
+</body>
+</html>

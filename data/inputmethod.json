@@ -1,0 +1,388 @@
+ {
+	"am-transliteration": {
+		"name": "ትራንስልተራትዖን",
+	},
+	"ar-kbd": {
+		"name": "أرابيك",
+	},
+	"as-avro": {
+		"name": "অভ্ৰ",
+	},
+	"as-bornona": {
+		"name": "বৰ্ণনা",
+	},
+	"as-inscript": {
+		"name": "ইন্‌স্ক্ৰিপ্ত",
+	},
+	"as-inscript2": {
+		"name": "ইন্‌স্ক্ৰিপ্ত ২",
+	},
+	"as-phonetic": {
+		"name": "ফনেটিক",
+	},
+	"as-transliteration": {
+		"name": "প্ৰতিৰূপান্তৰণ",
+	},
+	"be-kbd": {
+		"name": "Стандартная",
+	},
+	"be-latin": {
+		"name": "Łacinka",
+	},
+	"be-transliteration": {
+		"name": "Транслітэрацыя",
+	},
+	"ber-tfng": {
+		"name": "Tifinagh",
+	},
+	"bn-avro": {
+		"name": "অভ্র",
+	},
+	"bn-inscript": {
+		"name": "ইন্‌স্ক্ৰিপ্ত",
+	},
+	"bn-inscript2": {
+		"name": "ইন্‌স্ক্ৰিপ্ত ২",
+	},
+	"bn-nkb": {
+		"name": "ন্যাশনাল কিবোর্ড",
+	},
+	"bn-probhat": {
+		"name": "প্রভাত",
+	},
+	"brx-inscript": {
+		"name": "इनस्क्रिप्ट",
+	},
+	"brx-inscript2": {
+		"name": "इनस्क्रिप्ट २",
+	},
+	"cv-cyr-altgr": {
+		"name": "Чăвашла (AltGr)",
+	},
+	"cv-lat-altgr": {
+		"name": "Căvašla (AltGr)",
+	},
+	"cv-cyr-numbers": {
+		"name": "Чăвашла (цифрилисем)",
+	},
+	"cyrl-palochka": {
+		"name": "Palochka",
+	},
+	"da-normforms": {
+		"name": "normalformer",
+	},
+	"doi-inscript2": {
+		"name": "इनस्क्रिप्ट २",
+	},
+	"eo-transliteration": {
+		"name": "transliterigo",
+	},
+	"eo-h": {
+		"name": "Esperanto h",
+	},
+	"eo-h-f": {
+		"name": "Esperanto h fundamente",
+	},
+	"eo-plena": {
+		"name": "Esperanto plena",
+	},
+	"eo-q": {
+		"name": "Esperanto q sistemo",
+	},
+	"eo-vi": {
+		"name": "Esperanto vi sistemo",		
+	},
+	"eo-x": {
+		"name": "Esperanto x sistemo",
+	},
+	"fo-normforms": {
+		"name": "Føroyskt",
+	},
+	"fi-transliteration": {
+		"name": "translitterointi",
+	},
+	"hi-transliteration": {
+		"name": "लिप्यंतरण",
+	},
+	"hi-inscript": {
+		"name": "इनस्क्रिप्ट",
+	},
+	"hi-inscript2": {
+		"name": "इनस्क्रिप्ट २",
+	},
+	"hi-phonetic": {
+		"name": "फोनेटिक",
+	},
+	"is-normforms": {
+		"name": "Venjuleg eyðublöð",
+	},
+	"jv-transliteration": {
+		"name": "Transliteration",
+	},
+	"mai-inscript": {
+		"name": "इनस्क्रिप्ट",
+		"depends": "hi-inscript"
+		},
+	"mai-inscript2": {
+		"name": "इनस्क्रिप्ट २",
+		"depends": "hi-inscript2"
+		},
+	"hi-bolnagri": {
+		"name": "बोलनागरी",
+	},
+	"ml-transliteration": {
+		"name": "ലിപ്യന്തരണം",
+	},
+	"ml-inscript": {
+		"name": "ഇൻസ്ക്രിപ്റ്റ്",
+	},
+	"ml-inscript2": {
+		"name": "ഇൻസ്ക്രിപ്റ്റ് 2",
+	},
+	"sv-normforms": {
+		"name": "Normal forms",
+	},
+	"ta-inscript": {
+		"name": "இன்ஸ்கிரிப்ட்",
+	},
+	"ta-inscript2": {
+		"name": "இன்ஸ்கிரிப்ட் 2",
+	},
+	"ta-transliteration": {
+		"name": "எழுத்துப்பெயர்ப்பு",
+	},
+	"ta-99": {
+		"name": "தமிழ்99",
+	},
+	"ta-bamini": {
+		"name": "பாமினி",
+	},
+	"th-kedmanee": {
+		"name": "เกษมณี",
+	},
+	"th-pattachote": {
+		"name": "ปัตตะโชติ",
+	},
+	"de-transliteration": {
+		"name": "Deutsch",
+	},
+	"el-kbd": {
+		"name": "Τυπική πληκτρολόγιο",
+	},
+	"he-standard-2012": {
+		"name": "עברית עם ניקוד על בסיס אנגלית",
+	},
+	"he-standard-2012-extonly": {
+		"name": "עברית עם ניקוד",
+	},
+	"hr-kbd": {
+		"name": "Croatian kbd",
+	},
+	"hy-kbd": {
+		"name": "Ստանդարտ ստեղնաշար",
+	},
+	"gu-inscript": {
+		"name": "ઇનસ્ક્રિપ્ટ",
+	},
+	"gu-inscript2": {
+		"name": "ઇનસ્ક્રિપ્ટ ૨",
+	},
+	"gu-phonetic": {
+		"name": "ફોનૅટિક",
+	},
+	"gu-transliteration": {
+		"name": "લિપ્યાંતરણ",
+	},
+	"ka-transliteration": {
+		"name": "ტრანსლიტერაცია",
+	},
+	"ka-kbd": {
+		"name": "სტანდარტული კლავიატურის",
+	},
+	"kk-arabic": {
+		"name": "Kazakh Arabic transliteration",
+	},
+	"kk-kbd": {
+		"name": "Кирил",
+	},
+	"kn-inscript": {
+		"name": "ಇನ್ಸ್ಕ್ರಿಪ್ಟ್",
+	},
+	"kn-inscript2": {
+		"name": "ಇನ್‌ಸ್ಕ್ರಿಪ್ಟ್ ೨",
+	},
+	"kn-transliteration": {
+		"name": "ಲಿಪ್ಯಂತರಣ",
+	},
+	"kn-kgp": {
+		"name": "KGP/Nudi/KP Rao",
+	},
+	"gom-inscript2": {
+		"name": "इनस्क्रिप्ट २",
+	},
+	"ks-inscript": {
+		"name": "इनस्क्रिप्ट",
+	},
+	"ks-kbd": {
+		"name": "Kashmiri Arabic",
+	},
+	"lo-kbd": {
+		"name": "າຶກ",
+	},
+	"mh": {
+		"name": "Kajin M̧ajeļ",
+	},
+	"mn-cyrl": {
+		"name": "Кирилл",
+	},
+	"mni-inscript2": {
+		"name": "ইন্‌স্ক্ৰিপ্ত ২",
+	},
+	"mr-inscript": {
+		"name": "इनस्क्रिप्ट",
+	},
+	"mr-inscript2": {
+		"name": "इनस्क्रिप्ट २",
+	},
+	"mr-transliteration": {
+		"name": "अक्षरांतरण",
+	},
+	"mr-phonetic": {
+		"name": "फोनेटिक",
+	},
+	"my-kbd": {
+		"name": "မြန်မာဘာသာ kbd",
+	},
+	"my-xkb": {
+		"name": "မြန်မာဘာသာ xkb",
+	},
+	"ne-inscript": {
+		"name": "इनस्क्रिप्ट",
+	},
+	"ne-inscript2": {
+		"name": "इनस्क्रिप्ट २",
+	},
+	"ne-transliteration": {
+		"name": "ट्रांस्लितेरेशन",
+	},
+	"ne-rom": {
+		"name": "Romanized",
+	},
+	"ne-trad": {
+		"name": "Traditional",
+	},
+	"no-normforms": {
+		"name": "Normal transliterasjon",
+	},
+	"no-tildeforms": {
+		"name": "Tildemerket transliterasjon",
+	},
+	"or-transliteration": {
+		"name": "ଟ୍ରାନ୍ସଲି ଟରେସନ",
+	},
+	"or-inscript": {
+		"name": "ଇନସ୍କ୍ରିପ୍ଟ",
+	},
+	"or-inscript2": {
+		"name": "ଇନସ୍କ୍ରିପ୍ଟ2",
+	},
+	"or-lekhani": {
+		"name": "ଲେଖନୀ",
+	},
+	"or-phonetic": {
+		"name": "ଫୋନେଟିକ",
+	},
+	"sd-inscript2": {
+		"name": "इनस्क्रिप्ट २",
+	},
+	"se-normforms": {
+		"name": "Normal forms",
+	},
+	"sk-kbd": {
+		"name": "Štandardná",
+	},
+	"sr-kbd": {
+		"name": "Стандардна",
+	},
+	"te-inscript": {
+		"name": "ఇన్‍స్క్రిప్ట్",
+	},
+	"te-inscript2": {
+		"name": "ఇన్‍స్క్రిప్ట్ 2",
+	},
+	"te-transliteration": {
+		"name": "లిప్యంతరీకరణ",
+	},
+	"pa-inscript": {
+		"name": "ਇਨਸ੍ਕ੍ਰਿਪ੍ਟ",
+	},
+	"pa-inscript2": {
+		"name": "ਇਨਸ੍ਕ੍ਰਿਪ੍ਟ2",
+	},
+	"pa-jhelum": {
+		"name": "ਜੇਹਲਮ",
+	},
+	"pa-transliteration": {
+		"name": "ਤ੍ਰਾਨ੍ਸ੍ਲਿਤੇਰਾਤਿਓਂ",
+	},
+	"pa-phonetic": {
+		"name": "ਫੋਨੇਟਿਕ",
+	},
+	"ru-jcuken": {
+		"name": "ЙЦУКЕН",
+	},
+	"ru-kbd": {
+		"name": "кбд",
+	},
+	"ru-phonetic": {
+		"name": "фонетический",
+	},
+	"ru-yawerty": {
+		"name": "yawerty",
+	},
+	"sa-iast": {
+		"name": "Romanized",
+	},
+	"sa-inscript": {
+		"name": "इनस्क्रिप्ट",
+	},
+	"sa-inscript2": {
+		"name": "इनस्क्रिप्ट २",
+	},
+	"sa-transliteration": {
+		"name": "ट्रन्स्लितेरतिओन्",
+	},
+	"sah-transliteration": {
+		"name": "Transliteration",
+	},
+	"sat-inscript2": {
+		"name": "इनस्क्रिप्ट २",
+	},
+	"si-singlish": {
+		"name": "සිංග්ලිෂ්",
+	},
+	"si-wijesekara": {
+		"name": "විජේසේකර",
+	},
+	"ur-phonetic": {
+		"name": "صوتی",
+	},
+	"ur-transliteration": {
+		"name": "ٹرانسلٹریشن",
+	},
+	"ipa-sil": {
+		"name": "International Phonetic Alphabet - SIL",
+	},
+	"udm-alt": {
+		"name": "Удмурт ALT",
+	},
+	"uk-kbd": {
+		"name": "кбд",
+	},
+	"ug-kbd": {
+		"name": "Uyghur kbd",
+	},
+	"uz-kbd": {
+		"name": "Uzbek kbd",
+	}
+}

@@ -1,0 +1,319 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Language Search Example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+ <link rel="stylesheet" type="text/css" href="../css/bootstrap.css" media="screen">
+  <link rel="stylesheet" type="text/css" href="../css/bootstrap-responsive.css">
+
+  <link rel="stylesheet" type="text/css" href="../css/bootstrap-switch.css">
+  <link rel="stylesheet" type="text/css" href="../css/boxed.css">
+  <link rel="stylesheet" type="text/css" href="typeaheadtest.css">
+  <link href="../jquery.ime/css/jquery.ime.css" rel="stylesheet" />
+  
+   <script src="../js/hogan.js"></script>
+   
+  <script type="text/javascript" src="../js/jquery-1.10.2-min.js"></script>
+  <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="../js/bootstrap-switch.js"></script>
+  <script src="../js/typeahead.js"></script>
+  <script src="../jquery.ime/src/jquery.ime.js"></script>
+  <script src="../jquery.ime/src/jquery.ime.selector.js"></script>
+  <script src="../jquery.ime/src/jquery.ime.preferences.js"></script>
+  <script src="../jquery.ime/src/jquery.ime.inputmethods.js"></script>
+    <style type="text/css">
+      /* custom font! */
+/* ------------ */
+
+@font-face {
+  font-family: Prociono;
+  /*src: url(../font/Prociono-Regular-webfont.ttf);*/
+}
+
+/* scaffolding */
+/* ----------- */
+
+html {
+  overflow-y: scroll;
+  *overflow-x: hidden;
+}
+
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.tt-dropdown-menu,
+.gist {
+  text-align: left;
+}
+
+/* base styles */
+/* ----------- */
+
+html {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.2;
+  color: #333;
+}
+
+.title,
+.example-name {
+  font-family: Prociono;
+}
+
+p {
+  margin: 0 0 10px 0;
+}
+
+/* site theme */
+/* ---------- */
+
+.title {
+  margin: 20px 0 0 0;
+  font-size: 64px;
+}
+
+.example {
+  padding: 30px 0;
+}
+
+.example-name {
+  margin: 20px 0;
+  font-size: 32px;
+}
+
+.demo {
+  position: relative;
+  *z-index: 1;
+  margin: 50px 0;
+}
+
+#typeahead,
+.tt-query,
+#tt-hint {
+  width: 396px;
+  height: 30px;
+  padding: 8px 12px;
+  font-size: 24px;
+  line-height: 30px;
+  border: 2px solid #ccc;
+  -webkit-border-radius: 8px;
+     -moz-border-radius: 8px;
+          border-radius: 8px;
+  outline: none;
+}
+
+.typeahead {
+  background-color: #fff;
+}
+
+.typeahead:focus {
+  border: 2px solid #0097cf;
+}
+
+.tt-query {
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+     -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+#tt-hint {
+  color: #999
+}
+
+.tt-dropdown-menu {
+  width: 422px;
+  margin-top: 12px;
+  padding: 8px 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  -webkit-border-radius: 8px;
+     -moz-border-radius: 8px;
+          border-radius: 8px;
+  -webkit-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+     -moz-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+          box-shadow: 0 5px 10px rgba(0,0,0,.2);
+}
+
+.tt-suggestion {
+  padding: 3px 20px;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.tt-suggestion.tt-is-under-cursor {
+  color: #fff;
+  background-color: #0097cf;
+
+}
+
+.tt-suggestion p {
+  margin: 0;
+}
+
+.gist {
+  font-size: 14px;
+}
+
+/* example specific styles */
+/* ----------------------- */
+
+.example-twitter-oss .tt-suggestion {
+  padding: 8px 20px;
+}
+
+.example-twitter-oss .tt-suggestion + .tt-suggestion {
+  border-top: 1px solid #ccc;
+}
+
+.example-twitter-oss .repo-language {
+  float: right;
+  font-style: italic;
+}
+
+.example-twitter-oss .repo-name {
+  font-weight: bold;
+}
+
+.example-twitter-oss .repo-description {
+  font-size: 14px;
+}
+
+.example-sports .league-name {
+  margin: 0 20px 5px 20px;
+  padding: 3px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.example-arabic .tt-dropdown-menu {
+  text-align: right;
+}
+    </style>
+
+
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">examples</h1>
+
+      <div class="example example-twitter-oss">
+        <h2 class="example-name">Language Search</h2>
+        <p class="example-description">You can search by Language name, Language code (ISO) as well Autonym name of language</p>
+
+        <div class="demo">
+          <input class="typeahead" id="typeahead" type="text" placeholder="Language Search" >
+        </div>
+
+        <div class="gist">
+          </div>
+      </div>
+
+      <div class="example example-sports">
+        <h2 class="example-name">Search Using Language Name and ISO</h2>
+        <p class="example-description">Using language name and ISO</p>
+
+        <div class="demo">
+          <input class="typeahead" type="text" placeholder="Language Name and Code search">
+        </div>
+
+        <div class="gist">
+          </div>
+      </div>
+    </div>
+
+   
+    
+    <script>
+      $(document).ready(function() {
+  $('#typeahead').ime();
+  $('.example-twitter-oss .typeahead').typeahead({
+    name: 'Language Name',
+    prefetch: { 
+      url : '../data/nametoautonym.json',
+      ttl : 2000
+    },
+    limit: 10,
+    template: [
+      '<p class="repo-language" style="float:right;">{{iso}}</p>',
+      '<p class="repo-name">{{autonym}}</p>',
+      '<p class="repo-description">{{name}}</p>'
+    ].join(''),
+    engine:Hogan,
+    selected : function(item){
+      console.log(item);
+    }
+  });
+
+   $('.typeahead').on('typeahead:autocompleted', function (e, datum) {
+    console.log(e);
+    console.log(datum);
+    //$('.typeahead').val(datum.name + ' - ' + datum.autonym + ' - ' + datum.iso);
+  });
+
+   $('.typeahead').on('typeahead:selected', function (e, datum) {
+    console.log(e);
+    console.log(datum);
+    //$('.typeahead').val(datum.name + ' - ' + datum.autonym + ' - ' + datum.iso);
+  });
+/*
+  $('.example-twitter-oss .typeahead').typeahead({
+    name: 'twitter-oss',
+    prefetch: '../data/repos.json',
+    template: [
+      '<p class="repo-language">{{language}}</p>',
+      '<p class="repo-name">{{name}}</p>',
+      '<p class="repo-description">{{description}}</p>'
+    ].join(''),
+    //engine: Hogan
+  });
+
+  $('.example-arabic .typeahead').typeahead({
+    name: 'arabic',
+    local: [
+      "Ø§Ù„Ø¥Ù†Ø¬Ù„ÙŠØ²ÙŠØ©",
+      "Ù†Ø¹Ù…",
+      "Ù„Ø§",
+      "Ù…Ø±Ø­Ø¨Ø§",
+      "Ú©ÙŠÙ Ø§Ù„Ø­Ø§Ù„ØŸ",
+      "Ø£Ù‡Ù„Ø§",
+      "Ù…Ø¹ Ø§Ù„Ø³Ù„Ø§Ù…Ø©",
+      "Ù„Ø§ Ø£ØªÙƒÙ„Ù… Ø§Ù„Ø¹Ø±Ø¨ÙŠØ©",
+      "Ù„Ø§ Ø£ÙÙ‡Ù…",
+      "Ø£Ù†Ø§ Ø¬Ø§Ø¦Ø¹"
+    ]
+  });
+*/
+  $('.example-sports .typeahead').typeahead([
+    {
+      name: 'Language name',
+      prefetch: '../data/nametoautonym.json',
+      header: '<h3 class="league-name">Language Name</h3>'
+    },
+    {
+      name: 'ISO code',
+      prefetch: '../data/isotoname.json',
+      header: '<h3 class="league-name">ISO Code</h3>'
+    }
+  ]);
+/*
+  $('.example-films .typeahead').typeahead([
+    {
+      name: 'best-picture-winners',
+      remote: '../data/films/queries/%QUERY.json',
+      prefetch: '../data/films/post_1960.json',
+      template: '<p><strong>{{value}</strong> â€“ {{year}}</p>',
+      //engine: Hogan
+    }
+  ]); */
+});
+    </script>
+  </body>
+</html>
