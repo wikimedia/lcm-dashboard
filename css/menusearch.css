@@ -71,17 +71,26 @@ p {
 .tt-query,
 #tt-hint {
 	/*width: 396px;*/
-	width: 300px;
-	height: 16px;
-	margin-bottom: 5px;
+	display: inline-block;
+	width: 280px;
+	height: auto;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 0px;
+	padding-bottom: 4px;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 4px;
 	/*height: 30px;*/
 	font-size: 22px;
-	line-height: 30px;
+	line-height: 28px;
 	border: 2px solid #ccc;
 	-webkit-border-radius: 8px;
 	-moz-border-radius: 8px;
 	border-radius: 8px;
 	outline: none;
+
 }
 
 .typeahead {
@@ -103,7 +112,7 @@ p {
 }
 
 .tt-dropdown-menu {
-	width: 320px;
+	width: 300px;
 	margin-top: 12px;
 	padding: 8px 0;
 	background-color: #fff;

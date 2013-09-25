@@ -5,7 +5,7 @@ var cv_w = 300,
 	
 	var cv_arc = d3.svg.arc().outerRadius(cv_r).innerRadius(50);
 	var cv_pie = d3.layout.pie().value(function (d) { return d.value });
-	var cv_svg = d3.select("#data1")
+	var cv_svg = d3.select("#graph_data")
         .append("svg")
 		.attr("width", cv_w)
 		.attr("height", cv_h)

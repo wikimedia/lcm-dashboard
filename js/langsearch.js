@@ -1,9 +1,9 @@
-/*
-* js file for loading information of searched language
-* @author - Harsh Kothari (harshkothari410@gmail.com)
-* @license http://www.gnu.org/copyleft/gpl.html GNU General Public License 2.0 or later
-* global $:false (for jshint)
-*/
+/**
+ * js file for loading information of searched language
+ * @author - Harsh Kothari (harshkothari410@gmail.com)
+ * @license http://www.gnu.org/copyleft/gpl.html GNU General Public License 2.0 or later
+ * global $:false (for jshint)
+ */
 /*global $:false */
 $(function () {
 	"use strict";
@@ -35,14 +35,15 @@ $(function () {
 
 	$('.typeahead').on('typeahead:autocompleted', function (e, datum) {
 		//console.log(e);
-		if ($('.typeahead').parent().parent().attr('id') == 'noanimate') {
+		if ($('.typeahead').parent().parent().attr('id') == 'noanimate' ) {
 
 		}
 		else {
 			hideDataAnimation();	
 		}
 		//console.log(datum.name);
-		languageDetail( datum.name );
+		$('#data').hide(1000);
+		languageDetail( datum.iso );
 		//$('.typeahead').val(datum.name + ' - ' + datum.autonym + ' - ' + datum.iso);
 	});
 
@@ -53,7 +54,8 @@ $(function () {
 		else {
 			hideDataAnimation();	
 		}
-		languageDetail( datum.name );
+		$('#data').hide(1000);
+		languageDetail( datum.iso );
 		//console.log(datum.name);
 		//$('.typeahead').val(datum.name + ' - ' + datum.autonym + ' - ' + datum.iso);
 	});
@@ -99,6 +101,7 @@ function hideDataAnimation () {
 * output : fillData function call with response data
 */
 function languageDetail(lang){
+	$('#data').hide(1000);
 	var returnData;
 	$.ajax({
 		url: 'lib/langsearchajax.php',
@@ -180,6 +183,8 @@ function fillData(data) {
 			$('#imedetail').text('No IME is available');
 		}
 	});	
+	$('#langdetailshow,#back_button').show(1500);
+
 }
 
 /*

@@ -14,17 +14,50 @@
 	$language = $_GET['language'];
 	$format = $_GET['format'];
 
-	if ($language != 'all') {
-		$result = mysql_query("SELECT * FROM $tableName where langname_eng = '$language'",$con); 
+	if ($query == 'language'){
+		if ($language != 'all') {
+			$result = mysql_query("SELECT * FROM $tableName where langname_eng = '$language'",$con); 
+		}
+		else{
+			$result = mysql_query("SELECT * FROM $tableName", $con);
+		}
+
+		while ($result1 = mysql_fetch_assoc($result)) {
+			$array[] = $result1;
+		
+		}
 	}
-	else{
-		$result = mysql_query("SELECT * FROM $tableName", $con);
+	else {
+		$vars = explode('|', $tool);
+		$and = ' and ';	
+		$string = null;
+		$j = 0;
+		for ($i=0; $i < count($vars); $i++) { 
+		
+			if (strlen($vars[0]) < 2){
+				$j = 1;
+				continue;
+			}
+			if($i == $j)
+				$string = $string . $vars[$i]. '=1';
+			else
+				$string = $string. $and . $vars[$i]. '=1';
+		}
+
+		$query = 'select * from langdetail';
+	
+		if(count($vars) > 0 && strlen($tool) > 2)
+		$query = 'select * from langdetail where '.$string;
+		$result = mysql_query($query,$con);	
+		$array = 0;
+		while ($result1 = mysql_fetch_assoc($result)) {
+			$array = $array + 1;
+		}
+
+		#echo $array;
 	}
 
-	while ($result1 = mysql_fetch_assoc($result)) {
-		$array[] = $result1;
-		
-	}
+
 
 /*
 	$xml = new SimpleXMLElement('<root/>');
@@ -36,7 +69,7 @@
 	switch ($format) {
 		case 'json':
 			$json = json_encode($array);
-			var_dump($json);
+			//var_dump($json);
 			echo isset($_GET['callback']) ? "{$_GET['callback']}($json)" : $json;
 			break;
 

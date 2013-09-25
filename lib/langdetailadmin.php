@@ -1,20 +1,4 @@
-<div class="container-fluid" style="margin-top:20px;">
-	<div class="row-fluid">
-		<div class="span6" align="center">
-			<div class="example example-twitter-oss" id="noanimate">
-				<input class="typeahead" id="typeahead" type="text" placeholder="Language Search" >
-			</div>
-		</div>
-
-		<div class="span6" align="center">
-			<a class="btn btn-primary btn-large btn-block " style="width:284px;" href="inputlang.php">
-				Add New Language
-			</a>
-		</div>
-	</div>
-</div>	
-
-<div class="container-fluid">
+<div class="container-fluid" id="langdetailshow" style="display:none;">
 	<div class='row-fluid'>
 		<div class="span6">			
 			<div class='span12' id='boxed'>

@@ -11,13 +11,6 @@
 			
 			<div class="nav-collapse collapse">	
 				<ul class="nav pull-right">
-					<li>
-						<form class="navbar-search pull-left">
-							<div class="example example-twitter-oss">
-								<input class="typeahead" id="typeahead" type="text" placeholder="Language Search" >
-							</div>
-						</form>
-					</li>
 					<li><a href="index.php">Home</a></li>
 					<li><a href="#">About Us</a></li>
 					<li><a href="langfilter.php">Languages</a></li>

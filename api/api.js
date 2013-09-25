@@ -1,10 +1,15 @@
+/**
+ * js file for API console
+ * @author - Harsh Kothari (harshkothari410@gmail.com)
+ * @license http://www.gnu.org/copyleft/gpl.html GNU General Public License 2.0 or later
+ * global $:false (for jshint)
+ */
 $(function(){
 	$.ajax({
 		url: 'php/langdetailapi.php',
 		type: 'GETs',
 		dataType: 'json',
 		success : function(data){
-			//console.log(data[2]['langname_eng']);
 			for (var i = 0; i < data.length; i++) {
 				$('#languages').append('<option>' + data[i]['langname_eng'] + '</option>');
 			};
@@ -40,13 +45,19 @@ $(function(){
 
 		
 		
-		if($('#language').attr('style') == 'display: none; '){
+		if($('#language').is( ":hidden" ) == true){
 			tool_query = '';
 			for(var i=0;i<tools.length ; i++){
 				if(i==0){
+					if(tools[i] == 'ULS Webfonts'){
+						tools[i] = 'jquery_webfonts';
+					}
 					tool_query = tool_query + tools[i];
 				}
 				else{
+					if(tools[i] == 'ULS Webfonts'){
+						tools[i] = 'jquery_webfonts';
+					}
 					tool_query =  tool_query + '|' + tools[i];
 				}
 			}
@@ -59,20 +70,34 @@ $(function(){
 		$('#query_preview').text('/'+final_query);
 
 
+		var q = 
+		["$.ajax({",
+		"	url: http://192.252.213.68/lcmd/api/"+final_query+",",
+		"	type: 'GET',",
+		"	dataType: 'jsonp', //Use JSONP for cross domain data transfer",
+		"})",
+		".done(function(data) {",
+		"	//do whatever you want to do with data",
+		"})",
+		".fail(function() {",
+		"})",
+		".always(function() {",
+		"});"].join('\n');
+
+		$('#example').text(q);
+
+
 		$.ajax({
 			url: final_query,
 			type: 'GET',
 			dataType: '',
 		})
 		.done(function(data) {
-			console.log("success");
 			$('#result_preview').text(data);
 		})
 		.fail(function() {
-			console.log("error");
 		})
 		.always(function() {
-			console.log("complete");
 		});
 		
 	});

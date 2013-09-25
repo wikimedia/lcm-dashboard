@@ -10,7 +10,7 @@
 
 	$query = $_POST['query'];
 
-	$result = mysql_query("SELECT * FROM $tableName where langname_eng = '$query'",$con);          //query
+	$result = mysql_query("SELECT * FROM $tableName where langcode_iso = '$query'",$con);          //query
 	$i = 0;
 	while ($result1 = mysql_fetch_assoc($result)) {
 		$array[] = $result1['langcode_iso'];

@@ -1,3 +1,9 @@
+/**
+ * js file for filter process
+ * @author - Harsh Kothari (harshkothari410@gmail.com)
+ * @license http://www.gnu.org/copyleft/gpl.html GNU General Public License 2.0 or later
+ * global $:false (for jshint)
+ */
 $(function() {
 	$(':checkbox').change(function(){
 		$('#data').hide();
@@ -83,10 +89,16 @@ function filterdata(value){
 			$('#data').show();
 			$('#loader').hide();
 			langCount(data);
+			var a = data.length;
+			var b = 462 - a;
+			tests({'Yes' : a,'No':b});
 		},
 		error : function(data){
 			$('#langcount').html('<h3 class="text-info">' + (data.length)+ ' Languages </h3>');
 			//display_lang(data);
+		},
+		complete : function(data){
+			
 		}
 	})
 }
@@ -111,6 +123,7 @@ function filterLabel(){
 //Showing number of language, display_lang function call, label show
 function langCount(data){
 	$('#langlist > div').remove();
+	$('#data > div').remove();
 		if(data != null){
 			display_lang(data);
 			$('#langcount').html('<h3 class="text-info">' + (data.length)+ ' Languages </h3>');

@@ -11,20 +11,21 @@
 			
 			<div class="nav-collapse collapse">	
 				<ul class="nav pull-right">
-					<li>
-						<form class="navbar-search pull-left">
-							<div class="example example-twitter-oss">
-								<input class="typeahead" id="typeahead" type="text" placeholder="Language Search" >
-							</div>
-						</form>
-					</li>
 					<li><a href="index.php">Home</a></li>
-					<li><a href="#">About Us</a></li>
-					<li><a href="langfilter.php">Languages</a></li>
 					<li class="dropdown">
-						<a class="dropdown-toggle" href="#" data-toggle="dropdown">Sign In <strong class="caret"></strong></a>
+						<a class="dropdown-toggle" href="#" data-toggle="dropdown">About Project<strong class="caret"></strong></a>
+						<ul class="dropdown-menu">
+							<li><a href="https://github.com/wikimedia/lcm-dashboard/blob/master/README.md" target="_blank">Information</a></li>
+							<li><a href="https://github.com/wikimedia/lcm-dashboard/blob/gsoc2013/GPL-LICENSE" target="_blank">License</a></li>
+							<li><a href="https://github.com/wikimedia/lcm-dashboard/tree/gsoc2013" target="_blank">Project Source</a></li>
+						</ul>
+					</li>
+					<li><a href="https://github.com/wikimedia/lcm-dashboard/issues" target="_blank">Feedback</a></li>
+					<li><a href="api/index.php">API</a></li>
+					<!--
+					<li class="dropdown">
+						<a class="dropdown-toggle" href="#" data-toggle="dropdown">Admin<strong class="caret"></strong></a>
 						<div class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
-						<!-- Login form here -->
 						<form action="lib/login.php" method="post" accept-charset="UTF-8">
 							<input id="username" class="input-large" type="text" name="username" autocomplete="off" placeholder="Username"/>
 							<input id="password" class="input-large" type="password" name="password" placeholder="Password"/>
@@ -34,6 +35,7 @@
 						</form>
 						</div>
           			</li>
+          			-->
 				</ul>
 			</div>
 		</div>
