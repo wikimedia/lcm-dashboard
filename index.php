@@ -119,7 +119,7 @@
 			</label>
 
 			<label class="checkbox inline span4">
-				<input type="checkbox" id="jquery_i18n" value="jquery_i18n"><b> Internationlization Library</b>
+				<input type="checkbox" id="jquery_i18n" value="jquery_i18n"><b> Internationalization Library</b>
 			</label>
 		</div>
 
