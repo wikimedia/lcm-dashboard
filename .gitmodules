@@ -1,0 +1,3 @@
+[submodule "jquery.ime"]
+	path = jquery.ime
+	url = git://github.com/wikimedia/jquery.ime.git
