@@ -108,6 +108,7 @@
 			</div>
 		</div>
 
+		<div class="container-fluid" id="option-box">
 			<div class="span6 row-fluid">
 
 			<label class="checkbox inline span4" style="margin-left:10px;">
@@ -119,9 +120,10 @@
 			</label>
 
 			<label class="checkbox inline span4">
-				<input type="checkbox" id="jquery_i18n" value="jquery_i18n"><b> Internationalization Library</b>
+				<input type="checkbox" id="jquery_i18n" value="jquery_i18n"><b>  Internationalization Library</b>
 			</label>
 		</div>
+	</div>
 
 		<div class="span12 row-fluid" style="margin-top:10px;">
 			<label class="radio inline span2">
@@ -173,7 +175,6 @@
 
 	<script type="text/javascript">
 		$(function(){
-			//$('#langdetailshow').hide();
 			$( document ).on( 'click', '.ind_lang', function () {
 				event.preventDefault();
     			$this = $(this);
@@ -181,12 +182,14 @@
 				languageDetail($this.attr('id'));
     		} ); 
 
-			$('#back_button').click(function(){
-				$('#langdetailshow,#back_button').hide(1000);
-				$('#data').show(1500);
+			$( '#back_button' ).click( function () {
+				$('#langdetailshow,#back_button').fadeOut(300, function(){
+					$('#data').fadeIn(300);
+				});
+				
 			});
 
-			$("input[type='radio']").change(function(event) {
+			$( "input[type='radio']" ).change( function(event) {
 				$this = $(this);
 				if ($this.val() == 'list'){
 					$('#graphics').hide(1000);
@@ -196,7 +199,6 @@
 					$('#list').hide(1000);
 					$('#graphics').show(1500);
 				}
-				//console.log($this.val());
 			});
 
 			$(document).on('click','#webfont_link',function(event){
@@ -207,11 +209,12 @@
 	</script>
 	<script type="text/javascript" src="http://d3js.org/d3.v3.min.js"></script>
 	<script type="text/javascript" src="js/pi.js"></script>
-	<script type="text/javascript">
+
+ 	<script type="text/javascript">
 		var a = <?php echo $ime ?>;
 		var b = <?php echo $webfonts ?>;
 		var c = <?php echo $i18n ?>;
 		tests({'ime' : a,'webfonts':b,'i18n':c});
 	</script>
-</body>
+ </body>
 </html>

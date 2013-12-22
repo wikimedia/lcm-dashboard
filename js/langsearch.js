@@ -101,7 +101,7 @@ function hideDataAnimation () {
 * output : fillData function call with response data
 */
 function languageDetail(lang){
-	$('#data').hide(1000);
+	//$('#data').hide(1000);
 	var returnData;
 	$.ajax({
 		url: 'lib/langsearchajax.php',
@@ -183,8 +183,10 @@ function fillData(data) {
 			$('#imedetail').text('No IME is available');
 		}
 	});	
-	$('#langdetailshow,#back_button').show(1500);
-
+	$('#data').fadeOut(300,function(){
+		$('#langdetailshow,#back_button').fadeIn(300);
+	})
+	
 }
 
 /*

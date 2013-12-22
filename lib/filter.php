@@ -30,6 +30,7 @@
 
 	//echo $string;
 	$query = 'select * from langdetail';
+	//$query = 'select * from langdetail where wmf_proj_status=1';
 	
 
 	if(count($vars) > 0 && strlen($var) > 2)

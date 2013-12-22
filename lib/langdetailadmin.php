@@ -84,14 +84,6 @@
 					<input type="checkbox" >
 				</div>
 			</div>
-
-			<div class='span12' id='boxed'>
-				<div class="span6">Featured</div>
-				<div class="span3 iconshow" value="yes" id="f_or_i"></div>
-				<div id="normal-toggle-button" data-on-label="Yes" data-off-label="No" data-on="primary" data-off="danger" class="switch test">
-					<input type="checkbox" >
-				</div>
-			</div>
 		</div>
 
 		<!-- 2nd side of menu -->

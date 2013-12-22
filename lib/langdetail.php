@@ -60,11 +60,6 @@
 				<div class="span8">Glossary</div>
 				<div class="span3 iconshow" value="yes" id="glossary"></div>
 			</div>
-
-			<div class='span12' id='boxed'>
-				<div class="span8">Featured</div>
-				<div class="span3 iconshow" value="yes" id="f_or_i"></div>
-			</div>
 		</div>
 
 		<!-- 2nd side of menu -->

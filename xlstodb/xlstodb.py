@@ -45,17 +45,22 @@ query = """INSERT INTO langdetail ( langcode_iso, langcode_wmf, langname_eng, la
  
 test = u"\u2714"
 # iterate through ieach row
-for row_index in range(135,sheet.nrows): #sheet.nrows
- 
+print sheet.cell(135,0).value
+print sheet.cell(136,0).value
+
+for row_index in range(2,sheet.nrows): #sheet.nrows
     # we could assign the values directly in the values format string but this is easier to read
+    
+    #cprint row_index 
+    #print sheet.cell(row_index,0).value
+
     langcodeiso   = sheet.cell(row_index,0).value
     langcodewmf   = sheet.cell(row_index,1).value
     langname      = sheet.cell(row_index,3).value
     langname_a    = sheet.cell(row_index,4).value
-    #langname_a = 'testinf'
-    langcodehtml  = sheet.cell(row_index,5).value
+    langcodehtml  = sheet.cell(row_index,6).value
     macro_lang    = sheet.cell(row_index,2).value
-    wmf_pro_status = sheet.cell(row_index,6).value
+    wmf_pro_status = sheet.cell(row_index,5).value
     fallback_code = sheet.cell(row_index,7).value
     narayam       = sheet.cell(row_index,8).value
     jquery_ime    = sheet.cell(row_index,9).value
@@ -70,78 +75,39 @@ for row_index in range(135,sheet.nrows): #sheet.nrows
     glossary      = sheet.cell(row_index,18).value
     # the row contents are different every time so we put this in the loop
 
-    #for checking check mark
-    if macro_lang == test:
-        macro_lang = '1'
-    else:
-        macro_lang = '0'
 
-    if narayam.decode == test:
-        narayam = '1'
-    else:
-        narayam = '0'
 
-    if jquery_uls == test:
-        jquery_uls = '1'
-    else:
-        jquery_uls = '0'
-
-    if jquery_ime == test:
-        jquery_ime = '1'
-    else:
-        jquery_ime = '0'
-
-    if jquery_webfonts == test:
-        jquery_webfonts = '1'
-    else:
-        jquery_webfonts = '0'
-
-    if jquery_i18n == test:
-        jquery_i18n = '1'
-    else:
-        jquery_i18n = '0'
-
-    if translate1 == test:
-        translate1 = '1'
-    else:
-        translate1 = '0'
-
-    if dictionary == test:
-        dictionary = '1'
-    else:
-        dictionary = '0'
-
-    if spellchecker == test:
-        spellchecker = '1'
-    else:
-        spellchecker = '0'
-
-    if glossary == test:
-        jquery_uls = '1'
-    else:
-        jquery_uls = '0'
-
-    if i18n_mw_core == test:
-        i18n_mw_core = '1'
-    else:
-        i18n_mw_core = '0'
-
-    if wmf_pro_status == test:
-        wmf_pro_status = '1'
-    else:
-        wmf_pro_status = '0'
-
-    if webfonts == test:
-        webfonts = '1'
-    else:
-        webfonts = '0'
+    #for checking check mark or null value
+    langcodehtml = langcodehtml == '' and '-' or langcodehtml
+    fallback_code = fallback_code == '' and '-' or fallback_code
+    langcodewmf = langcodewmf == '' and '-' or langcodewmf
+    langname = langname == '' and '-' or langname
+    langname_a = langname_a == '' and '-' or langname_a
+    macro_lang = macro_lang == test and '1' or '0'
+    wmf_pro_status = wmf_pro_status == 1 and '1' or '0'
+    narayam = narayam == test and '1' or '0'
+    jquery_ime = jquery_ime == test and '1' or '0'
+    webfonts = webfonts == test and '1' or '0'
+    jquery_webfonts = jquery_webfonts == test and '1' or '0'
+    i18n_mw_core = i18n_mw_core == test and '1' or '0'
+    jquery_i18n = jquery_i18n == test and '1' or '0'
+    jquery_uls = jquery_uls == test and '1' or '0'
+    translate1 = translate1 == test and '1' or '0'
+    dictionary = dictionary == test and '1' or '0'
+    spellchecker = spellchecker == test and '1' or '0'
+    glossary = glossary == test and '1' or '0'
 
     #print jquery_uls
-    froi = 'f'
+    froi = '1'
     values = ( langcodeiso, langcodewmf, langname, langname_a, langcodehtml, macro_lang, wmf_pro_status, fallback_code, narayam, jquery_ime, webfonts, jquery_webfonts, i18n_mw_core, jquery_i18n, jquery_uls, translate1, dictionary, spellchecker, glossary ,froi)
     
     
+    if row_index == 216 or row_index == 154 or row_index == 302 or row_index == 675 or row_index == 693:
+        print sheet.cell(row_index,0).value 
+        continue
+    
     print values
+    
     res = cursor.execute(query, values)
     print "Executed ", row_index
  

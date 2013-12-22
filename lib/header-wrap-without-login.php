@@ -22,7 +22,6 @@
 					</li>
 					<li><a href="https://github.com/wikimedia/lcm-dashboard/issues" target="_blank">Feedback</a></li>
 					<li><a href="api/index.php">API</a></li>
-					<!--
 					<li class="dropdown">
 						<a class="dropdown-toggle" href="#" data-toggle="dropdown">Admin<strong class="caret"></strong></a>
 						<div class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
@@ -35,7 +34,6 @@
 						</form>
 						</div>
           			</li>
-          			-->
 				</ul>
 			</div>
 		</div>
