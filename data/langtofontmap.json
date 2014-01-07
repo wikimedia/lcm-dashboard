@@ -1,0 +1,278 @@
+{
+    "syc": [
+        "East Syriac Adiabene",
+        "Estarngelo Edessa",
+        "SertoUrhoy"
+    ],
+    "gu": [
+        "Lohit Gujarati"
+    ],
+    "en": [
+        "OpenDyslexic"
+    ],
+    "bho": [
+        "Lohit Devanagari"
+    ],
+    "tcy": [
+        "Gubbi",
+        "Lohit Kannada"
+    ],
+    "oc": [
+        "OpenDyslexic"
+    ],
+    "ca": [
+        "OpenDyslexic"
+    ],
+    "cdo": [
+        "CharisSIL"
+    ],
+    "am": [
+        "AbyssinicaSIL"
+    ],
+    "it": [
+        "OpenDyslexic"
+    ],
+    "sv": [
+        "OpenDyslexic"
+    ],
+    "ahr": [
+        "Lohit Marathi"
+    ],
+    "mai": [
+        "Lohit Devanagari"
+    ],
+    "as": [
+        "Lohit Assamese"
+    ],
+    "arc": [
+        "East Syriac Adiabene",
+        "Estarngelo Edessa",
+        "SertoUrhoy"
+    ],
+    "ga": [
+        "OpenDyslexic"
+    ],
+    "cr": [
+        "OskiEast"
+    ],
+    "jv": [
+        "Tuladha Jejeg"
+    ],
+    "et": [
+        "OpenDyslexic"
+    ],
+    "iu": [
+        "OskiEast"
+    ],
+    "gl": [
+        "OpenDyslexic"
+    ],
+    "id": [
+        "OpenDyslexic"
+    ],
+    "es": [
+        "OpenDyslexic"
+    ],
+    "gom": [
+        "Lohit Devanagari"
+    ],
+    "nl": [
+        "OpenDyslexic"
+    ],
+    "kok": [
+        "Lohit Devanagari"
+    ],
+    "lb": [
+        "OpenDyslexic"
+    ],
+    "pt": [
+        "OpenDyslexic"
+    ],
+    "nb": [
+        "OpenDyslexic"
+    ],
+    "af": [
+        "OpenDyslexic"
+    ],
+    "nan": [
+        "CharisSIL",
+        "Doulos SIL"
+    ],
+    "ne": [
+        "Lohit Nepali",
+        "Madan"
+    ],
+    "li": [
+        "OpenDyslexic"
+    ],
+    "tr": [
+        "OpenDyslexic"
+    ],
+    "tl": [
+        "OpenDyslexic"
+    ],
+    "pa": [
+        "Lohit Punjabi",
+        "Saab"
+    ],
+    "sw": [
+        "OpenDyslexic"
+    ],
+    "fo": [
+        "OpenDyslexic"
+    ],
+    "ti": [
+        "AbyssinicaSIL"
+    ],
+    "te": [
+        "Lohit Telugu"
+    ],
+    "ar": [
+        "Amiri"
+    ],
+    "is": [
+        "OpenDyslexic"
+    ],
+    "sux": [
+        "Akkadian"
+    ],
+    "yi": [
+        "Alef"
+    ],
+    "fr": [
+        "OpenDyslexic"
+    ],
+    "de": [
+        "OpenDyslexic"
+    ],
+    "wa": [
+        "OpenDyslexic"
+    ],
+    "hu": [
+        "OpenDyslexic"
+    ],
+    "fy": [
+        "OpenDyslexic"
+    ],
+    "bn": [
+        "Lohit Bengali",
+        "Siyam Rupali"
+    ],
+    "bo": [
+        "Jomolhari"
+    ],
+    "bh": [
+        "Lohit Devanagari"
+    ],
+    "bk": [
+        "OpenDyslexic"
+    ],
+    "fa": [
+        "Iranian Sans",
+        "Amiri"
+    ],
+    "mak": [
+        "Saweri"
+    ],
+    "hi": [
+        "Lohit Devanagari"
+    ],
+    "dz": [
+        "Jomolhari"
+    ],
+    "dv": [
+        "FreeFont-Thaana"
+    ],
+    "fi": [
+        "OpenDyslexic"
+    ],
+    "cy": [
+        "OpenDyslexic"
+    ],
+    "da": [
+        "OpenDyslexic"
+    ],
+    "arb": [
+        "Amiri"
+    ],
+    "bug": [
+        "Saweri"
+    ],
+    "he": [
+        "Alef",
+        "Miriam CLM",
+        "Taamey Frank CLM"
+    ],
+    "jv-java": [
+        "Tuladha Jejeg"
+    ],
+    "hbo": [
+        "Alef",
+        "Taamey Frank CLM"
+    ],
+    "saz": [
+        "Pagul"
+    ],
+    "ml": [
+        "AnjaliOldLipi",
+        "Meera"
+    ],
+    "sq": [
+        "OpenDyslexic"
+    ],
+    "mi": [
+        "OpenDyslexic"
+    ],
+    "kn": [
+        "Gubbi",
+        "Lohit Kannada"
+    ],
+    "km": [
+        "KhmerOS",
+        "KhmerOSbattambang",
+        "KhmerOSbokor",
+        "KhmerOSfasthand",
+        "KhmerOSfreehand",
+        "KhmerOSmuol",
+        "KhmerOSmuollight",
+        "KhmerOSmuolpali",
+        "KhmerOSsiemreap"
+    ],
+    "ur": [
+        "NafeesWeb"
+    ],
+    "akk": [
+        "Akkadian"
+    ],
+    "gd": [
+        "OpenDyslexic"
+    ],
+    "ms": [
+        "OpenDyslexic"
+    ],
+    "mr": [
+        "Lohit Marathi"
+    ],
+    "bpy": [
+        "Lohit Bengali",
+        "Siyam Rupali"
+    ],
+    "sa": [
+        "Lohit Devanagari"
+    ],
+    "ta": [
+        "Lohit Tamil",
+        "Lohit Tamil Classical",
+        "Thendral",
+        "Thenee"
+    ],
+    "my": [
+        "Myanmar3",
+        "Padauk",
+        "TharLon"
+    ],
+    "or": [
+        "Lohit Oriya",
+        "Utkal"
+    ]
+}
