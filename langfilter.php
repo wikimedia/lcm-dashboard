@@ -3,15 +3,15 @@
 	include 'lib/dbconnect.php';
 	$tableName = "langdetail";
 
-	$con = mysql_connect($host,$user,$pass);
-	$dbs = mysql_select_db($databaseName, $con);  
+	$con = mysql_connect($host, $user, $pass);
+	$dbs = mysql_select_db($databaseName, $con);
 
 	mysql_set_charset("utf8", $con);
 
 	$query = $_POST['query'];
 
 	//for featured and incubator languages
-	$result = mysql_query("SELECT * FROM $tableName where f_or_i='1'",$con);
+	$result = mysql_query("SELECT * FROM $tableName where f_or_i='1'", $con);
 	$i = 0;
 	while ($result1 = mysql_fetch_assoc($result)) {
 		$i = $i + 1;
@@ -19,7 +19,7 @@
 	$feature = $i;
 
 	//for webfonts
-	$result = mysql_query("SELECT * FROM $tableName where jquery_webfonts='1'",$con);
+	$result = mysql_query("SELECT * FROM $tableName where jquery_webfonts='1'", $con);
 	$i = 0;
 	while ($result1 = mysql_fetch_assoc($result)) {
 		$i = $i + 1;
@@ -27,7 +27,7 @@
 	$webfonts = $i;
 
 	//For input methods
-	$result = mysql_query("SELECT * FROM $tableName where jquery_ime='1'",$con);
+	$result = mysql_query("SELECT * FROM $tableName where jquery_ime='1'", $con);
 	$i = 0;
 	while ($result1 = mysql_fetch_assoc($result)) {
 		$i = $i + 1;
@@ -38,12 +38,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	
-	<meta http-equiv="content-type" content="text-html; charset=utf-8">	
+	<meta http-equiv="content-type" content="text-html; charset=utf-8">
 	<meta charset="utf-8">
 	<meta name="author" content="Harsh Kothari">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	
+
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css" media="screen">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.css">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap-switch.css">
@@ -52,7 +51,6 @@
 	<link rel="stylesheet" type="text/css" href="css/example.css">
 	<link rel="stylesheet" type="text/css" href="css/menusearch.css">
 
-	
 	<script type="text/javascript" src="js/hogan.js"></script>
 	<script type="text/javascript" src="js/jquery-1.10.2-min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
@@ -86,7 +84,6 @@
 	</div>
 <div class="container-fluid">
 	<div class='row-fluid'>
-
 
 		<div class='alert span3 alert-success ' id="filterLabel" align='center' style='display:none'>
 			Active Filters
@@ -129,7 +126,6 @@
 							</div>
 						</div>
 					</div>
-		
 
 					<!-- Heading 2 -->
 					<div class="accordion-group">
@@ -187,7 +183,6 @@
 						</div>
 					</div>
 
-
 				</div>
 		</div>
 
@@ -214,7 +209,7 @@
 				<?php echo $feature ?>
 			</div>
 			<div>
-				Languages in incubator 
+				Languages in incubator
 			</div>
 			<div>
 				Languages with webfonts
@@ -223,7 +218,7 @@
 			<div>
 				Languages with Input Methods
 				<?php echo $ime ?>
-			</div>	
+			</div>
 		</div>
 	</div>
 	</div>
@@ -242,3 +237,4 @@
 -->
 </body>
 </html>
+

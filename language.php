@@ -4,19 +4,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	
-	<meta http-equiv="content-type" content="text-html; charset=utf-8">	
+	<meta http-equiv="content-type" content="text-html; charset=utf-8">
 	<meta charset="utf-8">
 	<meta name="author" content="Harsh Kothari">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	
+
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css" media="screen">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.css">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap-switch.css">
 	<link rel="stylesheet" type="text/css" href="css/boxed.css">
 	<link rel="stylesheet" type="text/css" href="jquery.ime/css/jquery.ime.css"/>
 	<link rel="stylesheet" type="text/css" href="css/example.css">
-	
+
 	<script type="text/javascript" src="js/hogan.js"></script>
 	<script type="text/javascript" src="js/jquery-1.10.2-min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
@@ -59,7 +58,8 @@
 	?>
 
 	<!-- Modal -->
-	<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog"
+		aria-labelledby="myModalLabel" aria-hidden="true">
 		<div class="modal-header">
 			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
 			<h3 id="myModalLabel">Temp</h3>
@@ -68,7 +68,8 @@
 			<p id="oldname" align="center"></p>
 			<legend></legend>
 			<p id="newvalue" align="center"></p>
-			<p align='center'><input type="text" class="input-large" id="changeval" name="changeval" align='center'/></p>
+			<p align='center'><input type="text" class="input-large"
+				id="changeval" name="changeval" align='center'/></p>
 		</div>
 		<div class="modal-footer">
 			<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
@@ -87,3 +88,4 @@
 	</script>
 </body>
 </html>
+
