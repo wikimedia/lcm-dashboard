@@ -1,7 +1,6 @@
 <?php
 	session_start();
 	if (isset($_SESSION['username'])) {
-		
 	}
 	else {
 		header('Location: index.php');
@@ -10,12 +9,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	
-	<meta http-equiv="content-type" content="text-html; charset=utf-8">	
+	<meta http-equiv="content-type" content="text-html; charset=utf-8">
 	<meta charset="utf-8">
 	<meta name="author" content="Harsh Kothari">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	
+
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css" media="screen">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.css">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap-switch.css">
@@ -24,7 +22,6 @@
 	<link rel="stylesheet" type="text/css" href="css/example.css">
 	<link rel="stylesheet" type="text/css" href="css/menusearch.css">
 
-	
 	<script type="text/javascript" src="js/hogan.js"></script>
 	<script type="text/javascript" src="js/jquery-1.10.2-min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
@@ -49,7 +46,7 @@
 			include "lib/header-wrap-without-login.php";
 		}
 	?>
-	<!-- Menu over -->	
+	<!-- Menu over -->
 	<div class="container">
 		<div class="well">
 		<form class="form-horizontal" method="post" action="langentry.php">
@@ -71,7 +68,7 @@
 					<input type="text" class="input-large" id="langcode_wmf " name="langcode_wmf "/>
 				</div>
 			</div>
-			
+
 			<div class="control-group">
 				<label  class="control-label">Language Name (Eng)</label>
 				<div class="controls">
@@ -135,7 +132,7 @@
 					<label class="radio inline"> <input type="radio" class="" name="jquery_ime" value="0" />No</label>
 				</div>
 			</div>
-			
+
 			<legend></legend>
 
 			<div class="control-group">
@@ -145,7 +142,7 @@
 					<label class="radio inline"> <input type="radio" class="" name="webfonts" value="0" />No</label>
 				</div>
 			</div>
-			
+
 			<div class="control-group">
 				<label class="control-label">uls.webfonts</label>
 				<div class="controls">
@@ -153,7 +150,7 @@
 					<label class="radio inline"> <input type="radio" class="" name="jquery_webfonts" value="0" />No</label>
 				</div>
 			</div>
-			
+
 			<legend></legend>
 
 			<div class="control-group">
@@ -163,15 +160,15 @@
 					<label class="radio inline"> <input type="radio" class="" name="i18n_mw_core" value="0" />No</label>
 				</div>
 			</div>
-			
+
 			<div class="control-group">
 				<label class="control-label">jquery.i18n</label>
 				<div class="controls">
 					<label class="radio inline"> <input type="radio" class="" name="jquery_i18n" value="1" />Yes</label>
 					<label class="radio inline"> <input type="radio" class="" name="jquery_i18n" value="0" />No</label>
 				</div>
-			</div>			
-			
+			</div>
+
 			<legend></legend>
 			
 			<div class="control-group">
@@ -180,32 +177,32 @@
 					<label class="radio inline"> <input type="radio" class="" name="translate" value="1" />Yes</label>
 					<label class="radio inline"> <input type="radio" class="" name="translate" value="0" />No</label>
 				</div>
-			</div>	
-			
+			</div>
+
 			<div class="control-group">
 				<label class="control-label">Dictionary</label>
 				<div class="controls">
 					<label class="radio inline"> <input type="radio" class="" name="dictionary" value="1" />Yes</label>
 					<label class="radio inline"> <input type="radio" class="" name="dictionary" value="0" />No</label>
 				</div>
-			</div>	
-			
+			</div>
+
 			<div class="control-group">
 				<label class="control-label">Spellchecker</label>
 				<div class="controls">
 					<label class="radio inline"> <input type="radio" class="" name="spellchecker" value="1" />Yes</label>
 					<label class="radio inline"> <input type="radio" class="" name="spellchecker" value="0" />No</label>
 				</div>
-			</div>	
-			
+			</div>
+
 			<div class="control-group">
 				<label class="control-label">Glossary</label>
 				<div class="controls">
 					<label class="radio inline"> <input type="radio" class="" name="glossary" value="1" />Yes</label>
 					<label class="radio inline"> <input type="radio" class="" name="glossary" value="0" />No</label>
 				</div>
-			</div>	
-			
+			</div>
+
 			<legend></legend>
 			
 			<div class="control-group">
@@ -214,31 +211,30 @@
 					<label class="radio inline"> <input type="radio" class="" name="jquery_uls" value="1" />Yes</label>
 					<label class="radio inline"> <input type="radio" class="" name="jquery_uls" value="0" />No</label>
 				</div>
-			</div>	
-			
+			</div>
+
 			<div class="control-group">
 				<label class="control-label">Feature / Incubator</label>
 				<div class="controls">
 					<label class="radio inline"> <input type="radio" class="" name="f_or_i" value="1" />Yes</label>
 					<label class="radio inline"> <input type="radio" class="" name="f_or_i" value="0" />No</label>
 				</div>
-			</div>	
-			
+			</div>
+
 			<div class="control-group">
-				
+
 				<div class="controls">
 					<a class="btn btn-primary btn-large" id="submit">Submit</a>
 				</div>
-			</div>	
-			
-			
+			</div>
+
 <!-- over div -->
 		</div>
 
 		</form>
 		</div>
 	</div>
-	
+
 	<!--Model -->
 
 	<!-- Modal -->
@@ -282,7 +278,7 @@
 					<td><label  class="control-label"> <?php echo $_POST['macro_lang']; ?></label></td>	
 				</tr>
 			</table>
-		</div>	
+		</div>
 	</div>
 
 	
@@ -358,7 +354,7 @@
 					<td><label  class="control-label">Feature</label></td>	
 				</tr>
 			</table>
-		</div>	
+		</div>
 	</div>
 		</div>
 		<div class="modal-footer">
@@ -366,7 +362,7 @@
 			<button class="btn btn-primary" id="save">Save changes</button>
 		</div>
 	</div>
-	
+
 	<link href="jquery.ime/css/jquery.ime.css" rel="stylesheet" />
 	<script src="jquery.ime/src/jquery.ime.js"></script>
 	<script src="jquery.ime/src/jquery.ime.selector.js"></script>
@@ -392,7 +388,7 @@
 					$('#langcode_iso1').text($('#langcode_iso').val());	
 					$('#langcode_wmf1').text($('#langcode_wmf').val());
 					$('#myModal').modal('show'); 
-					
+
 				}
 			})
 
@@ -403,3 +399,4 @@
 	</script>
 </body>
 </html>
+

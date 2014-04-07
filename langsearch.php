@@ -1,7 +1,6 @@
 <?php
 	session_start();
 	if (isset($_SESSION['username'])) {
-		
 	}
 	else {
 		header('Location: index.php');
@@ -11,19 +10,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	
-	<meta http-equiv="content-type" content="text-html; charset=utf-8">	
+	<meta http-equiv="content-type" content="text-html; charset=utf-8">
 	<meta charset="utf-8">
 	<meta name="author" content="Harsh Kothari">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	
+
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css" media="screen">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.css">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap-switch.css">
 	<link rel="stylesheet" type="text/css" href="css/boxed.css">
 	<link rel="stylesheet" type="text/css" href="jquery.ime/css/jquery.ime.css"/>
 	<link rel="stylesheet" type="text/css" href="css/example.css">
-	
+
 	<script type="text/javascript" src="js/hogan.js"></script>
 	<script type="text/javascript" src="js/jquery-1.10.2-min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
@@ -68,17 +66,17 @@
 				</p>
 
 				<div class="row-fluid" id="legend">
-				
+
 					<div class="span4">
 						<legend></legend>
 					</div>
-					
+
 					<div class="span4">
 						<p align="center" style="margin-top:-7px;">
 							<b>OR</b>
 						</p>
 					</div>
-					
+
 					<div class="span4">
 						<legend></legend>
 					</div>
@@ -90,13 +88,13 @@
 					</a>
 				</p>
 
-			</div>			
+			</div>
 
 			<div class="span4"></div>
-		</div>	
-		
+		</div>
+
 	</div>
-	
+
 	<!-- Alert show -->
 	<div class="container-fluid">
 		<div class="row-fluid">
@@ -107,7 +105,7 @@
 	<!-- Language detail show -->
 	<div class="container-fluid">
 		<div class='row-fluid'>
-			<div class="span6">			
+			<div class="span6">
 				<div class='span12' id='boxed'>
 					<div class="span6">Language Code (ISO)</div>
 					<div class="span4" id="langcode_iso"></div>
@@ -148,7 +146,7 @@
 					<div class="span6">Macro Language</div>
 					<div class="span3 iconshow" id="macro_lang"></div>
 					<div id="normal-toggle-button" data-on-label="Yes" data-off-label="No" data-on="primary" data-off="danger" class="switch test">
-						<input type="checkbox" >
+						<input type="checkbox">
 					</div>
 				</div>
 
@@ -156,7 +154,7 @@
 					<div class="span6">WMF Project Status</div>
 					<div class="span3 iconshow" value="yes" id="wmf_proj_status"></div>
 					<div id="normal-toggle-button" data-on-label="Yes" data-off-label="No" data-on="primary" data-off="danger" class="switch test">
-						<input type="checkbox" >
+						<input type="checkbox">
 					</div>
 				</div>
 
@@ -164,7 +162,7 @@
 					<div class="span6">Translator</div>
 					<div class="span3 iconshow" value="yes" id="translate"></div>
 					<div id="normal-toggle-button" data-on-label="Yes" data-off-label="No" data-on="primary" data-off="danger" class="switch test">
-						<input type="checkbox" >
+						<input type="checkbox">
 					</div>
 				</div>	
 
@@ -172,7 +170,7 @@
 					<div class="span6">Dictionary</div>
 					<div class="span3 iconshow" value="yes" id="dictionary"></div>
 					<div id="normal-toggle-button" data-on-label="Yes" data-off-label="No" data-on="primary" data-off="danger" class="switch test">
-						<input type="checkbox" >
+						<input type="checkbox">
 					</div>
 				</div>
 
@@ -180,7 +178,7 @@
 					<div class="span6">Spellchecker</div>
 					<div class="span3 iconshow" value="yes" id="spellchecker"></div>
 					<div id="normal-toggle-button" data-on-label="Yes" data-off-label="No" data-on="primary" data-off="danger" class="switch test">
-						<input type="checkbox" >
+						<input type="checkbox">
 					</div>
 				</div>
 
@@ -188,7 +186,7 @@
 					<div class="span6">Glossary</div>
 					<div class="span3 iconshow" value="yes" id="glossary"></div>
 					<div id="normal-toggle-button" data-on-label="Yes" data-off-label="No" data-on="primary" data-off="danger" class="switch test">
-						<input type="checkbox" >
+						<input type="checkbox">
 					</div>
 				</div>
 
@@ -196,7 +194,7 @@
 					<div class="span6">Featured</div>
 					<div class="span3 iconshow" value="yes" id="f_or_i"></div>
 					<div id="normal-toggle-button" data-on-label="Yes" data-off-label="No" data-on="primary" data-off="danger" class="switch test">
-						<input type="checkbox" >
+						<input type="checkbox">
 					</div>
 				</div>
 			</div>

@@ -3,15 +3,15 @@
 	include 'lib/dbconnect.php';
 	$tableName = "langdetail";
 
-	$con = mysql_connect($host,$user,$pass);
-	$dbs = mysql_select_db($databaseName, $con);  
+	$con = mysql_connect($host, $user, $pass);
+	$dbs = mysql_select_db($databaseName, $con);
 
 	mysql_set_charset("utf8", $con);
 
 	$query = $_POST['query'];
 
 	//for featured and incubator languages
-	$result = mysql_query("SELECT * FROM $tableName where f_or_i='1'",$con);
+	$result = mysql_query("SELECT * FROM $tableName where f_or_i='1'", $con);
 	$i = 0;
 	while ($result1 = mysql_fetch_assoc($result)) {
 		$i = $i + 1;
@@ -19,7 +19,7 @@
 	$feature = $i;
 
 	//for webfonts
-	$result = mysql_query("SELECT * FROM $tableName where jquery_webfonts='1'",$con);
+	$result = mysql_query("SELECT * FROM $tableName where jquery_webfonts='1'", $con);
 	$i = 0;
 	while ($result1 = mysql_fetch_assoc($result)) {
 		$i = $i + 1;
@@ -27,14 +27,14 @@
 	$webfonts = $i;
 
 	//For input methods
-	$result = mysql_query("SELECT * FROM $tableName where jquery_ime='1'",$con);
+	$result = mysql_query("SELECT * FROM $tableName where jquery_ime='1'", $con);
 	$i = 0;
 	while ($result1 = mysql_fetch_assoc($result)) {
 		$i = $i + 1;
 	}
 	$ime = $i;
 
-	$result = mysql_query("SELECT * FROM $tableName where jquery_i18n='1'",$con);
+	$result = mysql_query("SELECT * FROM $tableName where jquery_i18n='1'", $con);
 	$i = 0;
 	while ($result1 = mysql_fetch_assoc($result)) {
 		$i = $i + 1;
@@ -45,7 +45,7 @@
 <html lang="en">
 <head>
 	
-	<meta http-equiv="content-type" content="text-html; charset=utf-8">	
+	<meta http-equiv="content-type" content="text-html; charset=utf-8">
 	<meta charset="utf-8">
 	<meta name="author" content="Harsh Kothari">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -72,7 +72,6 @@
 	
 </head>
 <body>
-	
 	<?php
 		if(isset($_SESSION['username'])){
 			include "lib/header-wrap-with-login.php";
@@ -84,7 +83,8 @@
 
 	<div class="container-fluid hero-unit">
 		<h1>Language Coverage Matrix Dashboard</h1>
-		<p>The Language Coverage Matrix dashboard would help automate the information about language support provided by the Wikimedia Language Engineering team</p>
+		<p>The Language Coverage Matrix dashboard would help automate the information about language
+		support provided by the Wikimedia Language Engineering team</p>
 		<!--
 		<p>
 			<a class="btn btn-primary btn-large">
@@ -120,7 +120,8 @@
 			</label>
 
 			<label class="checkbox inline span4">
-				<input type="checkbox" id="jquery_i18n" value="jquery_i18n"><b>  Internationalization Library</b>
+				<input type="checkbox" id="jquery_i18n"
+					value="jquery_i18n"><b>Internationalization Library</b>
 			</label>
 		</div>
 	</div>
@@ -153,8 +154,6 @@
 		?>
 		</div>
 
-
-
 	<div class='row-fluid list' id=''>
 		<div id="loader" align="center">
 			<img src="img/ajax-loader.gif" align="center">
@@ -177,10 +176,10 @@
 		$(function(){
 			$( document ).on( 'click', '.ind_lang', function () {
 				event.preventDefault();
-    			$this = $(this);
+			$this = $(this);
 				console.log($this.attr('id'));
 				languageDetail($this.attr('id'));
-    		} ); 
+		} );
 
 			$( '#back_button' ).click( function () {
 				$('#langdetailshow,#back_button').fadeOut(300, function(){
@@ -210,11 +209,11 @@
 	<script type="text/javascript" src="http://d3js.org/d3.v3.min.js"></script>
 	<script type="text/javascript" src="js/pi.js"></script>
 
- 	<script type="text/javascript">
+	<script type="text/javascript">
 		var a = <?php echo $ime ?>;
 		var b = <?php echo $webfonts ?>;
 		var c = <?php echo $i18n ?>;
 		tests({'ime' : a,'webfonts':b,'i18n':c});
 	</script>
- </body>
+</body>
 </html>
