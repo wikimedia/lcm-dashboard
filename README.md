@@ -32,7 +32,7 @@ data. It will provide features to:
 
 ## Instalation
 
-* Clone this repository using following command:
+* Clone this repository using the following command:
   * https://github.com/wikimedia/lcm-dashboard.git
 or you can simply download zip version / ssh / subversion / HTTPS clone
 
@@ -49,4 +49,4 @@ or you can simply download zip version / ssh / subversion / HTTPS clone
   * > mysql -u username -p lcmdashboard < data.sql
 * If you are using phpmyadmin GUI version, import lcmdashboard.sql and data.sql.
 * Your database is created.
-* Now Finally go to localhost/server to run this project.
+* Go to localhost/server to run this project.
