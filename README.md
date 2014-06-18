@@ -30,3 +30,23 @@ data. It will provide features to:
 3. Compare language coverage over a period of time.
 4. Visually present information.
 
+## Instalation
+
+* Clone this repository using following command:
+  * https://github.com/wikimedia/lcm-dashboard.git
+or you can simply download zip version / ssh / subversion / HTTPS clone
+
+* Create the database:
+  * Database Name : lcmdashboard
+  * host : localhost
+  * username : root
+  * password : root
+
+* If you have different username and password then go to lib directory where you will find dbconnect.php file. You just have to alter the file using your username and password and save it.
+* Create the tables and enter the data from the dump. To do that, enter the database directory and do the following:
+* If you are using command line version of MySQL, then type the following commands:
+  * > mysql -u username -p lcmdashboard < lcmdashboard.sql
+  * > mysql -u username -p lcmdashboard < data.sql
+* If you are using phpmyadmin GUI version, import lcmdashboard.sql and data.sql.
+* Your database is created.
+* Now Finally go to localhost/server to run this project.
